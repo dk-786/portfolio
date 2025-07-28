@@ -56,9 +56,9 @@ const Header = () => {
   const [email, setEmail] = useState("");
   const [query, setQuery] = useState("");
   const [showSearch, setShowSearch] = useState(false);
-  const searchRef = useRef(null);
+  const searchRef = useRef<HTMLDivElement>(null);
 
-  const handleSubmitForgot = (e) => {
+  const handleSubmitForgot = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert(`Password reset link sent to: ${email}`);
     setShowForgotModal(false);
@@ -74,7 +74,7 @@ const Header = () => {
     remember: false,
   });
 
-  const handleChangelogin = (e) => {
+  const handleChangelogin = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormDatalogin({
       ...formDatalogin,
@@ -82,22 +82,23 @@ const Header = () => {
     });
   };
 
-  const handleSubmitlogin = (e) => {
+  const handleSubmitlogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert("Login Successful!");
     console.log(formDatalogin);
     setShowModaleye(false); // Close modal after login
   };
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    const checked = e.target instanceof HTMLInputElement ? e.target.checked : false;
     setFormData({
       ...formData,
       [name]: type === "checkbox" ? checked : value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (formData.captcha !== generatedCaptcha) {
       alert("Captcha does not match!");
@@ -111,7 +112,7 @@ const Header = () => {
     console.log(formData);
   };
   useEffect(() => {
-    function handleClickOutside(event) {
+    function handleClickOutside(event: MouseEvent) {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
         setShowSearch(false);
       }
