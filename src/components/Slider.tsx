@@ -1,6 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules'
+import Image from 'next/image'
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -75,15 +76,17 @@ const Slider = () => {
         {images.map((image, index) => (
           <SwiperSlide key={`slide-${index}`}>
             <div className="w-full h-full relative">
-              <img
+              <Image
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover hidden md:block"
+                fill
+                className="object-cover hidden md:block"
               />
-              <img
+              <Image
                 src={mobileImages[index]}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover md:hidden"
+                fill
+                className="object-cover md:hidden"
               />
               {/* Content overlay for first slide */}
               {index === 0 && (
@@ -142,7 +145,7 @@ const Slider = () => {
                       <span className="text-yellow-600 font-semibold">from $25</span>
                     </p>
                     <h2 className="text-3xl md:text-4xl font-bold mb-2">
-                      Everyone's Talking About
+                      Everyone&apos;s Talking About
                     </h2>
                     <h3 className="text-3xl md:text-4xl font-bold mb-6">
                       Sweeper and funnel

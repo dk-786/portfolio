@@ -3,19 +3,15 @@ import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import Link from "next/link";
 import { CiUser } from "react-icons/ci";
-import { FaRegHeart } from "react-icons/fa";
-import { IoMdSearch } from "react-icons/io";
-import { AiOutlineShopping } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiX } from "react-icons/fi";
 
 interface MobiledrawerProps {
   onSignIn: () => void;
   onRegister: () => void;
-  onSearch: () => void;
 }
 
-const Mobiledrawer = ({ onSignIn, onRegister, onSearch }: MobiledrawerProps) => {
+const Mobiledrawer = ({ onSignIn, onRegister }: MobiledrawerProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 

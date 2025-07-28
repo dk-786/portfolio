@@ -21,19 +21,15 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import Mobiledrawer from "./Mobiledrawer";
 
@@ -113,7 +109,8 @@ const Header = () => {
   };
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (searchRef.current && !searchRef.current.contains(event.target)) {
+      const target = event.target as Element;
+      if (searchRef.current && !searchRef.current.contains(target)) {
         setShowSearch(false);
       }
     }
@@ -657,11 +654,10 @@ const Header = () => {
       <div className="flex items-center justify-between gap-4 p-6">
         {/* Mobile Menu Button - First on Mobile */}
         <div className="md:hidden">
-          <Mobiledrawer
-            onSignIn={() => setShowModaleye(true)}
-            onRegister={() => setShowModal(true)}
-            onSearch={() => setShowSearch(true)}
-          />
+                     <Mobiledrawer 
+             onSignIn={() => setShowModaleye(true)}
+             onRegister={() => setShowModal(true)}
+           />
         </div>
 
         {/* Search Button - Second on Mobile */}
