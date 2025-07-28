@@ -93,7 +93,7 @@ const Slider = () => {
                 <div className="absolute inset-0 flex items-center left-4 md:left-24">
                   <div className="ml-4 md:ml-16 text-black max-w-md">
                     <p className="text-sm mb-2">
-                      <span className="text-gray-600">Quick parcel delivery,  </span>
+                      <span className="text-gray-600">Quick parcel delivery  </span>
                       <span className="text-yellow-600 font-semibold">from $25</span>
                     </p>
                     <h2 className="text-3xl md:text-4xl font-bold mb-2">
@@ -142,7 +142,7 @@ const Slider = () => {
                   <div className="ml-4 md:ml-16 text-black max-w-md">
                     <p className="text-sm mb-2">
                       <span className="text-gray-600">Quick parcel delivery,  </span>
-                      <span className="text-yellow-600 font-semibold">from $25</span>
+                      <span className="text-yellow-600 font-semibold">from 25</span>
                     </p>
                     <h2 className="text-3xl md:text-4xl font-bold mb-2">
                       Everyone&apos;s Talking About
