@@ -35,3 +35,33 @@ export const products = [
     newPrice: "€21.00",
   },
 ];
+
+export const posters = [
+  {
+    id: 1,
+    src: "/images/poster.jpg", 
+    alt: "Poster 1",
+  },
+  {
+    id: 2,
+    src: "/images/poster1.jpg",
+    alt: "Poster 2",
+  },
+  {
+    id: 3,
+    src: "/images/patti.webp",
+    alt: "Poster 3",
+  },
+  {
+    id: 4,
+    src: "/images/chair3.jpg",
+    alt: "Poster 4",
+  },
+  {
+    id: 5,
+    src: "/images/sofa.webp",
+    alt: "Poster 5",
+  }
+  
+ 
+];

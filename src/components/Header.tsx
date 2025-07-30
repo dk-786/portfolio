@@ -8,29 +8,12 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Button } from "./ui/button";
 import { FiSearch, FiX } from "react-icons/fi";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaBasketballBall,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram,FaTwitter, FaBasketballBall,} from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import Image from "next/image";
 import { IoIosArrowDown } from "react-icons/io";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,} from "@/components/ui/dropdown-menu";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger,} from "@/components/ui/navigation-menu";
 import Mobiledrawer from "./Mobiledrawer";
 
 const Header = () => {
@@ -900,9 +883,7 @@ const Header = () => {
             <div className="relative cursor-pointer">
               <FaRegHeart className="size-5" />
               <span
-                className="
-         absolute -top-3 -right-3
-         text-xs
+                className=" absolute -top-3 -right-3 text-xs
          font-medium
          rounded-full
          w-4 h-4
