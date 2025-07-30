@@ -669,7 +669,7 @@ const Header = () => {
         </Button>
       </div>
 
-      <div className=" flex items-center justify-between  p-6  ">
+      <div className=" flex items-center justify-between gap-4  p-6  ">
         {/* Mobile Menu Button - First on Mobile */}
         <div className="md:hidden">
           <Mobiledrawer
@@ -695,7 +695,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation - Hidden on Mobile */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center md:gap-1">
           {/* Home Menu */}
           <NavigationMenu>
             <NavigationMenuList>
