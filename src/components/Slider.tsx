@@ -24,7 +24,7 @@ const Slider = () => {
   ]
 
   return (
-    <div className="w-full h-96 md:h-[500px] rounded-lg shadow-lg overflow-hidden">
+    <div className="w-full h-96 md:h-[500px] rounded-lg shadow-lg overflow-hidden ">
       <style>{`
         .swiper-button-next,
         .swiper-button-prev {

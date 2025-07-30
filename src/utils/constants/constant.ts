@@ -1,0 +1,37 @@
+export const products = [
+  {
+    id: 0,
+    img: "/images/jag1.jpg",
+    hoverImg: "/images/jag.jpg",
+    discount: "-20%",
+    name: "Storm Small Jug",
+    oldPrice: "€21.97",
+    newPrice: "€17.58",
+  },
+  {
+    id: 1,
+    img: "/images/chair.jpg",
+    hoverImg: "/images/chair1.jpg",
+    discount: "-30%",
+    name: "Elegant Vase",
+    oldPrice: "€30.00",
+    newPrice: "€21.00",
+  },
+  {
+    id: 2,
+    img: "/images/table.jpg",
+    hoverImg: "/images/table1.jpg",
+    discount: "-10%",
+    name: "Elegant Vase",
+    oldPrice: "€30.00",
+    newPrice: "€21.00",
+  },
+  {
+    id: 3,
+    img: "/images/basket.jpg",
+    discount: "-20%",
+    name: "Elegant Vase",
+    oldPrice: "€30.00",
+    newPrice: "€21.00",
+  },
+];

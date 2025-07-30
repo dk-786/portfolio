@@ -85,9 +85,12 @@ const Header = () => {
     setShowModaleye(false); // Close modal after login
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value, type } = e.target;
-    const checked = e.target instanceof HTMLInputElement ? e.target.checked : false;
+    const checked =
+      e.target instanceof HTMLInputElement ? e.target.checked : false;
     setFormData({
       ...formData,
       [name]: type === "checkbox" ? checked : value,
@@ -124,85 +127,88 @@ const Header = () => {
 
   return (
     <>
-             {showSearch && (
-         <div className="fixed top-0 left-0 w-full bg-white md:p-8 shadow-lg z-50">
-           {/* Desktop/Laptop Layout - Single Line */}
-           <div className="hidden md:flex items-center justify-between px-6 py-4">
-             <div ref={searchRef} className="flex items-center justify-between w-full">
-               {/* Logo */}
-               <Link href="/" className="flex items-center">
-                 <Image
-                   src="/logo.jpg"
-                   alt="Logo"
-                   width={120}
-                   height={40}
-                   priority
-                 />
-               </Link>
+      {showSearch && (
+        <div className="fixed top-0 left-0 w-full bg-white md:p-8 shadow-lg z-50">
+          {/* Desktop/Laptop Layout - Single Line */}
+          <div className="hidden md:flex items-center justify-between px-6 py-4">
+            <div
+              ref={searchRef}
+              className="flex items-center justify-between w-full"
+            >
+              {/* Logo */}
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/logo.jpg"
+                  alt="Logo"
+                  width={120}
+                  height={40}
+                  priority
+                />
+              </Link>
 
-               {/* Search Bar */}
-               <div className="flex items-center w-1/2 border border-gray-300 rounded">
-                 <input
-                   type="text"
-                   placeholder="Search"
-                   value={query}
-                   onChange={(e) => setQuery(e.target.value)}
-                   className="w-full px-4 py-2 outline-none"
-                 />
-                 <button className="px-4 text-gray-600 hover:text-black">
-                   <FiSearch size={20} />
-                 </button>
-               </div>
+              {/* Search Bar */}
+              <div className="flex items-center w-1/2 border border-gray-300 rounded">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  className="w-full px-4 py-2 outline-none"
+                />
+                <button className="px-4 text-gray-600 hover:text-black cursor-pointer">
+                  <FiSearch size={20} />
+                </button>
+              </div>
 
-               {/* Cancel Button */}
-               <button
-                 onClick={() => setShowSearch(false)}
-                 className="text-2xl text-gray-700 hover:text-black ml-4"
-               >
-                 <FiX />
-               </button>
-             </div>
-           </div>
+              {/* Cancel Button */}
+              <button
+                onClick={() => setShowSearch(false)}
+                className="text-2xl text-gray-700 hover:text-black ml-4"
+              >
+                <FiX />
+              </button>
+            </div>
+          </div>
 
-           {/* Mobile Layout - Two Lines */}
-           <div className="md:hidden p-4">
-             <div ref={searchRef}>
-               {/* First Line - Logo and Cancel Button */}
-               <div className="flex items-center justify-between mb-4 h-10">
-                 <Link href="/" className="flex items-center">
-                   <Image
-                     src="/logo.jpg"
-                     alt="Logo"
-                     width={120}
-                     height={40}
-                     priority
-                   />
-                 </Link>
-                 <button
-                   onClick={() => setShowSearch(false)}
-                   className="text-2xl text-gray-700 hover:text-black"
-                 >
-                   <FiX />
-                 </button>
-               </div>
+          {/* Mobile Layout - Two Lines */}
+          <div className="md:hidden p-4">
+            <div ref={searchRef}>
+              {/* First Line - Logo and Cancel Button */}
+              <div className="flex items-center justify-between mb-4 h-10">
+                <Link href="/" className="flex items-center">
+                  <Image
+                    src="/logo.jpg"
+                    alt="Logo"
+                    width={120}
+                    height={40}
+                    priority
+                  />
+                </Link>
+                <button
+                  onClick={() => setShowSearch(false)}
+                  className="text-2xl text-gray-700 hover:text-black"
+                >
+                  <FiX />
+                </button>
+              </div>
 
-               {/* Second Line - Search Bar */}
-               <div className="flex items-center w-full border border-gray-300 rounded-lg">
-                 <input
-                   type="text"
-                   placeholder="Search products..."
-                   value={query}
-                   onChange={(e) => setQuery(e.target.value)}
-                   className="w-full px-4 py-3 outline-none rounded-l-lg"
-                 />
-                 <button className="px-4 py-3 text-gray-600 hover:text-black bg-gray-50 rounded-r-lg">
-                   <FiSearch size={20} />
-                 </button>
-               </div>
-             </div>
-           </div>
-         </div>
-       )}
+              {/* Second Line - Search Bar */}
+              <div className="flex items-center w-full border border-gray-300 rounded-lg">
+                <input
+                  type="text"
+                  placeholder="Search products..."
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  className="w-full px-4 py-3 outline-none rounded-l-lg"
+                />
+                <button className="px-4 py-3 text-gray-600 hover:text-black bg-gray-50 rounded-r-lg cursor-pointer">
+                  <FiSearch size={20} />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {showForgotModal && (
         <div
@@ -333,7 +339,7 @@ const Header = () => {
                   />
                   <button
                     type="button"
-                    className="absolute right-3 top-2.5 text-gray-500 hover:text-gray-700"
+                    className="absolute right-3 top-2.5 text-gray-500 hover:text-gray-700 cursor-pointer"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? <FaEyeSlash /> : <FaEye />}
@@ -481,7 +487,7 @@ const Header = () => {
                 </span>
                 <button
                   type="button"
-                  className="text-blue-500 underline text-sm"
+                  className="text-blue-500 underline text-sm cursor-pointer"
                   onClick={() => setGeneratedCaptcha(generateCaptcha())}
                 >
                   Refresh
@@ -577,7 +583,7 @@ const Header = () => {
           </span>
           <Button
             size="sm"
-            className="bg-[#ba933e] hover:bg-[#a47f32] text-white h-7 "
+            className="bg-[#ba933e] hover:bg-[#a47f32] text-white h-7 cursor-pointer"
           >
             Shop Now!
           </Button>
@@ -586,25 +592,37 @@ const Header = () => {
         <div className="flex items-center gap-8">
           <div className="flex items-center text-sm gap-4">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-gray-600">
+              <DropdownMenuTrigger className="flex items-center gap-1 text-gray-600 cursor-pointer">
                 English
                 <IoIosArrowDown className="mt-1" />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuItem>Spanish</DropdownMenuItem>
-                <DropdownMenuItem>Arabic</DropdownMenuItem>
-                <DropdownMenuItem>Portuguese</DropdownMenuItem>
-                <DropdownMenuItem>Russian</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  Spanish
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  Arabic
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  Portuguese
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  Russian
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-gray-600">
+              <DropdownMenuTrigger className="flex items-center gap-1 text-gray-600 cursor-pointer">
                 USD $<IoIosArrowDown className="mt-1" />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuItem>GBP £</DropdownMenuItem>
-                <DropdownMenuItem>JPY ¥</DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  GBP £
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  JPY ¥
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
@@ -612,25 +630,25 @@ const Header = () => {
           <div className="flex items-center gap-5">
             <Link
               href="/"
-              className="text-gray-600 hover:text-[#ba933e] transition-colors duration-300"
+              className="text-gray-600 hover:text-[#ba933e] transition-colors duration-300 cursor-pointer"
             >
               <FaFacebook size="18px" />
             </Link>
             <Link
               href="/"
-              className="text-gray-600 hover:text-[#ba933e] transition-colors duration-300"
+              className="text-gray-600 hover:text-[#ba933e] transition-colors duration-300 cursor-pointer"
             >
               <FaInstagram size="18px" />
             </Link>
             <Link
               href="/"
-              className="text-gray-600 hover:text-[#ba933e] transition-colors duration-300"
+              className="text-gray-600 hover:text-[#ba933e] transition-colors duration-300 cursor-pointer"
             >
               <FaTwitter size="18px" />
             </Link>
             <Link
               href="/"
-              className="text-gray-600 hover:text-[#ba933e] transition-colors duration-300"
+              className="text-gray-600 hover:text-[#ba933e] transition-colors duration-300 cursor-pointer"
             >
               <FaBasketballBall size="18px" />
             </Link>
@@ -644,20 +662,20 @@ const Header = () => {
           Free shipping on all orders over $79
         </span>
         <Button
-            size="sm"
-            className="bg-[#ba933e] hover:bg-[#a47f32] text-white h-7 "
-          >
-            Shop Now!
-          </Button>
+          size="sm"
+          className="bg-[#ba933e] hover:bg-[#a47f32] text-white h-7 cursor-pointer"
+        >
+          Shop Now!
+        </Button>
       </div>
 
-      <div className="flex items-center justify-between gap-4 p-6">
+      <div className=" flex items-center justify-between  p-6  ">
         {/* Mobile Menu Button - First on Mobile */}
         <div className="md:hidden">
-                     <Mobiledrawer 
-             onSignIn={() => setShowModaleye(true)}
-             onRegister={() => setShowModal(true)}
-           />
+          <Mobiledrawer
+            onSignIn={() => setShowModaleye(true)}
+            onRegister={() => setShowModal(true)}
+          />
         </div>
 
         {/* Search Button - Second on Mobile */}
@@ -669,395 +687,217 @@ const Header = () => {
         </div>
 
         {/* Logo - Centered on Mobile */}
-        <Link href="/" className="flex items-center justify-center flex-1 md:flex-none">
+        <Link
+          href="/"
+          className="flex  items-center justify-center flex-1 md:flex-none"
+        >
           <Image src="/logo.jpg" alt="Logo" width={120} height={40} priority />
         </Link>
 
         {/* Desktop Navigation - Hidden on Mobile */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-6">
+          {/* Home Menu */}
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger
                   className="
-                        bg-transparent
-                        text-1xl font-medium        
-                        hover:text-[#ba933e]
-                        hover:!bg-transparent
-                        focus:!bg-transparent
-                        focus:outline-none
-                        data-[state=open]:!bg-transparent
-                        data-[state=open]:text-[#ba933e]
-                        transition-colors
-                    "
+            bg-transparent text-1xl font-medium hover:text-[#ba933e]
+            hover:!bg-transparent focus:!bg-transparent focus:outline-none
+            data-[state=open]:!bg-transparent data-[state=open]:text-[#ba933e]
+            transition-colors cursor-pointer
+          "
                 >
                   Home
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[200px] ">
-                    <li className="flex flex-col ">
-                      <NavigationMenuLink asChild>
+                  <ul className="grid w-[200px]">
+                    {["Home 1", "Home 2", "Home 3"].map((item, idx) => (
+                      <NavigationMenuLink asChild key={idx}>
                         <Link
                           href="#"
                           className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
+                    text-gray-700 hover:!text-[#ba933e] focus:!text-[#ba933e]
+                    !bg-transparent transition-colors
+                  "
                         >
-                          Home 1
+                          {item}
                         </Link>
                       </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="#"
-                          className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
-                        >
-                          Home 2
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="#"
-                          className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
-                        >
-                          Home 3
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
+                    ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
 
+          {/* Shop Menu */}
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger
                   className="
-                        bg-transparent
-                        text-1xl font-medium        
-                        hover:text-[#ba933e]
-                        hover:!bg-transparent
-                        focus:!bg-transparent
-                        focus:outline-none
-                        data-[state=open]:!bg-transparent
-                        data-[state=open]:text-[#ba933e]
-                        transition-colors
-                    "
+            bg-transparent text-1xl font-medium hover:text-[#ba933e]
+            hover:!bg-transparent focus:!bg-transparent focus:outline-none
+            data-[state=open]:!bg-transparent data-[state=open]:text-[#ba933e]
+            transition-colors cursor-pointer
+          "
                 >
                   Shop
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[200px] ">
-                    <li className="flex flex-col ">
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="#"
-                          className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
-                        >
-                          Home 1
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="#"
-                          className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
-                        >
-                          Home 2
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="#"
-                          className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
-                        >
-                          Home 3
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
+                  <ul className="grid w-[200px]">
+                    {["All Products", "Categories", "Best Sellers"].map(
+                      (item, idx) => (
+                        <NavigationMenuLink asChild key={idx}>
+                          <Link
+                            href="#"
+                            className="
+                    text-gray-700 hover:!text-[#ba933e] focus:!text-[#ba933e]
+                    !bg-transparent transition-colors
+                  "
+                          >
+                            {item}
+                          </Link>
+                        </NavigationMenuLink>
+                      )
+                    )}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
 
+          {/* Pages Menu */}
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger
                   className="
-                        bg-transparent
-                        text-1xl font-medium        
-                        hover:text-[#ba933e]
-                        hover:!bg-transparent
-                        focus:!bg-transparent
-                        focus:outline-none
-                        data-[state=open]:!bg-transparent
-                        data-[state=open]:text-[#ba933e]
-                        transition-colors
-                    "
+            bg-transparent text-1xl font-medium hover:text-[#ba933e]
+            hover:!bg-transparent focus:!bg-transparent focus:outline-none
+            data-[state=open]:!bg-transparent data-[state=open]:text-[#ba933e]
+            transition-colors cursor-pointer
+          "
                 >
                   Pages
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[200px] ">
-                    <li className="flex flex-col ">
-                      <NavigationMenuLink asChild>
+                  <ul className="grid w-[200px]">
+                    {["About Us", "Contact Us", "FAQ"].map((item, idx) => (
+                      <NavigationMenuLink asChild key={idx}>
                         <Link
                           href="#"
                           className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
+                    text-gray-700 hover:!text-[#ba933e] focus:!text-[#ba933e]
+                    !bg-transparent transition-colors
+                  "
                         >
-                          Home 1
+                          {item}
                         </Link>
                       </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="#"
-                          className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
-                        >
-                          Home 2
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="#"
-                          className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
-                        >
-                          Home 3
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
+                    ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
 
+          {/* Collection Menu */}
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger
                   className="
-                        bg-transparent
-                        text-1xl font-medium        
-                        hover:text-[#ba933e]
-                        hover:!bg-transparent
-                        focus:!bg-transparent
-                        focus:outline-none
-                        data-[state=open]:!bg-transparent
-                        data-[state=open]:text-[#ba933e]
-                        transition-colors
-                    "
+            bg-transparent text-1xl font-medium hover:text-[#ba933e]
+            hover:!bg-transparent focus:!bg-transparent focus:outline-none
+            data-[state=open]:!bg-transparent data-[state=open]:text-[#ba933e]
+            transition-colors cursor-pointer
+          "
                 >
-                  Collections
+                  Collection
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[200px] ">
-                    <li className="flex flex-col ">
-                      <NavigationMenuLink asChild>
+                  <ul className="grid w-[200px]">
+                    {["New Arrivals", "Featured", "Sale"].map((item, idx) => (
+                      <NavigationMenuLink asChild key={idx}>
                         <Link
                           href="#"
                           className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
+                    text-gray-700 hover:!text-[#ba933e] focus:!text-[#ba933e]
+                    !bg-transparent transition-colors
+                  "
                         >
-                          Home 1
+                          {item}
                         </Link>
                       </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="#"
-                          className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
-                        >
-                          Home 2
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="#"
-                          className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
-                        >
-                          Home 3
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
+                    ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
 
+          {/* Blog Menu */}
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger
                   className="
-                        bg-transparent
-                        text-1xl font-medium        
-                        hover:text-[#ba933e]
-                        hover:!bg-transparent
-                        focus:!bg-transparent
-                        focus:outline-none
-                        data-[state=open]:!bg-transparent
-                        data-[state=open]:text-[#ba933e]
-                        transition-colors
-                    "
+            bg-transparent text-1xl font-medium hover:text-[#ba933e]
+            hover:!bg-transparent focus:!bg-transparent focus:outline-none
+            data-[state=open]:!bg-transparent data-[state=open]:text-[#ba933e]
+            transition-colors cursor-pointer
+          "
                 >
                   Blog
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[200px] ">
-                    <li className="flex flex-col ">
-                      <NavigationMenuLink asChild>
+                  <ul className="grid w-[200px]">
+                    {["Latest Posts", "Categories", "Tags"].map((item, idx) => (
+                      <NavigationMenuLink asChild key={idx}>
                         <Link
                           href="#"
                           className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
+                    text-gray-700 hover:!text-[#ba933e] focus:!text-[#ba933e]
+                    !bg-transparent transition-colors
+                  "
                         >
-                          Home 1
+                          {item}
                         </Link>
                       </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="#"
-                          className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
-                        >
-                          Home 2
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="#"
-                          className="
-                                text-gray-700
-                                hover:!text-[#ba933e]
-                                focus:!text-[#ba933e]
-                                !bg-transparent
-                                transition-colors
-                            "
-                        >
-                          Home 3
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
+                    ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-
-          <div
-            className="
-                        font-medium
-    text-1xl
-    text-gray-800
-    hover:text-[#ba933e]
-    transition-colors
-    cursor-pointer
-  "
-          >
-            Contact
-          </div>
         </div>
 
         {/* Desktop Actions - Hidden on Mobile */}
-        <div className="hidden md:flex items-center justify-between gap-8 font-medium">
+        <div className="hidden md:flex items-center w-82 justify-between font-medium ">
           <div className="flex items-center gap-2 ">
             <button
               onClick={() => setShowModaleye(true)}
-              className="flex items-center gap-1"
+              className="flex items-center gap-1 cursor-pointer"
             >
               {" "}
               <CiUser className="size-6" />
-              Sign In{" "}
+              SignIn{" "}
             </button>
             <span className=" flex items-center">/</span>
-            <button onClick={() => setShowModal(true)}>Register</button>
+            <button
+              onClick={() => setShowModal(true)}
+              className="cursor-pointer"
+            >
+              Register
+            </button>
           </div>
 
           <span className=" flex items-center">|</span>
           <div className="flex items-center gap-6">
             {/* Heart with Counter */}
-            <div className="relative">
+            <div className="relative cursor-pointer">
               <FaRegHeart className="size-5" />
               <span
                 className="
@@ -1073,7 +913,7 @@ const Header = () => {
               </span>
             </div>
 
-            <div className="relative">
+            <div className="relative cursor-pointer">
               <AiOutlineShopping className="size-6" />
               <span
                 className="
@@ -1090,7 +930,7 @@ const Header = () => {
             </div>
 
             <IoMdSearch
-              className="size-6"
+              className="size-6 cursor-pointer"
               onClick={() => setShowSearch(true)}
             />
           </div>
@@ -1098,7 +938,7 @@ const Header = () => {
 
         {/* Mobile Actions - Visible only on Mobile */}
         <div className="md:hidden flex items-center gap-4 ">
-          <div className="relative">
+          <div className="relative cursor-pointer">
             <AiOutlineShopping className="size-6 cursor-pointer" />
             <span className="absolute -top-2 -right-2  text-xs rounded-full w-4 h-4 flex items-center justify-center">
               0
