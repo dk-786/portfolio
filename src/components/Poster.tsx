@@ -27,9 +27,8 @@ const Poster = () => {
 
               {/* Text Overlay */}
               <div
-                className={`absolute inset-0 flex flex-col justify-center items-start p-4 sm:p-8 ${
-                  index === 0 ? "text-black" : "text-white"
-                }`}
+                className={`absolute inset-0 flex flex-col justify-center items-start p-4 sm:p-8 ${index === 0 ? "text-black" : "text-white"
+                  }`}
               >
                 <p className="text-base sm:text-lg font-semibold">
                   Quick parcel delivery,{" "}
@@ -39,9 +38,8 @@ const Poster = () => {
                   Up to 70% Off <br /> Interior Home Decor
                 </h2>
                 <p
-                  className={`mt-3 text-xs sm:text-sm ${
-                    index === 0 ? "text-gray-600" : "text-gray-200"
-                  }`}
+                  className={`mt-3 text-xs sm:text-sm ${index === 0 ? "text-gray-600" : "text-gray-200"
+                    }`}
                 >
                   Class aptent taciti sociosqu ad litora
                 </p>
@@ -137,42 +135,42 @@ const Poster = () => {
         </div>
       </div>
 
-     <div className="py-5">
-  {posters
-    .filter((poster) => [6].includes(poster.id))
-    .map((poster) => (
-      <div
-        key={poster.id}
-        className="relative w-full  overflow-hidden group"
-      >
-        {/* Image with responsive height */}
-        <Image
-          src={poster.src}
-          alt={poster.alt}
-          width={600}
-          height={800}
-          className="block w-full h-[430px] sm:h-auto object-cover transform transition-transform duration-500 ease-in-out"
-        />
+      <div className="mt-5">
+        {posters
+          .filter((poster) => [6].includes(poster.id))
+          .map((poster) => (
+            <div
+              key={poster.id}
+              className="relative w-full  overflow-hidden group"
+            >
+              {/* Image with responsive height */}
+              <Image
+                src={poster.src}
+                alt={poster.alt}
+                width={600}
+                height={800}
+                className="block w-full h-[430px] sm:h-auto object-cover transform transition-transform duration-500 ease-in-out"
+              />
 
-        {/* Text content */}
-        <div className="absolute top-30 right-4  sm:top-30 sm:right-56 text-black px-4">
-          <p className="text-lg sm:text-2xl font-semibold">
-            Quick parcel delivery,{" "}
-            <span className="text-[#a67c00] font-bold">from $25</span>
-          </p>
-          <p className="text-3xl sm:text-5xl">Shop The New Brands</p>
-          <p className="text-3xl sm:text-4xl mb-2">Up to 40% off now.</p>
-          <p className="text-1xl sm:text-sm mt-1">
-            Class aptent taciti sociosqu ad litora torquent per
-          </p>
+              {/* Text content */}
+              <div className="absolute top-30 right-4  sm:top-30 sm:right-56 text-black px-4">
+                <p className="text-lg sm:text-2xl font-semibold">
+                  Quick parcel delivery,{" "}
+                  <span className="text-[#a67c00] font-bold">from $25</span>
+                </p>
+                <p className="text-3xl sm:text-5xl">Shop The New Brands</p>
+                <p className="text-3xl sm:text-4xl mb-2">Up to 40% off now.</p>
+                <p className="text-1xl sm:text-sm mt-1">
+                  Class aptent taciti sociosqu ad litora torquent per
+                </p>
 
-          <button className="mt-4 sm:mt-5 px-4 sm:px-6 py-2 sm:py-3 rounded-md font-semibold text-white bg-black hover:bg-[#a67c00] transition">
-            Shop Collection →
-          </button>
-        </div>
+                <button className="mt-4 sm:mt-5 px-4 sm:px-6 py-2 sm:py-3 rounded-md font-semibold text-white bg-black hover:bg-[#a67c00] transition">
+                  Shop Collection →
+                </button>
+              </div>
+            </div>
+          ))}
       </div>
-    ))}
-</div>
 
     </div>
   );

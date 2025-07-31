@@ -315,7 +315,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation - Hidden on Mobile */}
-        <div className="hidden md:flex items-center">
+        <div className="hidden md:flex items-center ">
           {navigationItems.map((item, index) => (
             <NavigationMenu key={index}>
               <NavigationMenuList>
@@ -334,12 +334,13 @@ const Header = () => {
                           data-[state=open]:text-[#ba933e]
                           transition-colors
                           cursor-pointer
+                          
                         "
                       >
                         {item.title}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid w-[300px] gap-1 p-2">
+                        <ul className="grid w-[150px]   gap-1 p-2">
                           <li className="flex flex-col">
                             {item.dropdownItems?.map((dropdownItem, dropdownIndex) => (
                               <NavigationMenuLink key={dropdownIndex} asChild>
@@ -352,7 +353,6 @@ const Header = () => {
                                     !bg-transparent
                                     transition-colors
                                     px-4 py-3
-                                    rounded-md
                                     hover:bg-gray-50
                                     flex items-center justify-between
                                     group
@@ -363,21 +363,9 @@ const Header = () => {
                                       <span className="font-medium group-hover:text-[#ba933e]">
                                         {dropdownItem.title}
                                       </span>
-                                      {dropdownItem.badge && (
-                                        <span className="
-                                          text-xs px-2 py-1 rounded-full
-                                          bg-[#ba933e] text-white
-                                          font-medium
-                                        ">
-                                          {dropdownItem.badge}
-                                        </span>
-                                      )}
+                                     
                                     </div>
-                                    {dropdownItem.description && (
-                                      <span className="text-sm text-gray-500 mt-1">
-                                        {dropdownItem.description}
-                                      </span>
-                                    )}
+
                                   </div>
                                 </Link>
                               </NavigationMenuLink>

@@ -94,29 +94,24 @@ export const socialMediaLinks = [
   { name: "Dribbble", icon: "FaBasketballBall", href: "/", color: "hover:text-pink-500" },
 ];
 
-// Enhanced navigation items with more details
+// Navigation items
 export const navigationItems = [
   {
     title: "Home",
     href: "/",
     hasDropdown: true,
-    description: "Choose your home page style",
     dropdownItems: [
       { 
         title: "Home 1", 
-        href: "/home-1",
-        description: "Modern minimalist design",
-        badge: "Popular"
+        href: "/home-1"
       },
       { 
         title: "Home 2", 
-        href: "/home-2",
-        description: "Classic elegant layout"
+        href: "/home-2"
       },
       { 
         title: "Home 3", 
-        href: "/home-3",
-        description: "Creative showcase style"
+        href: "/home-3"
       },
     ],
   },
@@ -124,33 +119,27 @@ export const navigationItems = [
     title: "Shop",
     href: "/shop",
     hasDropdown: true,
-    description: "Browse our products",
     dropdownItems: [
       { 
         title: "Shop Grid", 
-        href: "/shop-grid",
-        description: "Grid layout view"
+        href: "/shop-grid"
       },
       { 
         title: "Shop List", 
-        href: "/shop-list",
-        description: "List layout view"
+        href: "/shop-list"
       },
       { 
         title: "Product Details", 
-        href: "/product-details",
-        description: "Individual product page"
+        href: "/product-details"
       },
       { 
         title: "Shopping Cart", 
         href: "/cart",
-        description: "Your shopping cart",
-        badge: "New"
+      
       },
       { 
         title: "Checkout", 
-        href: "/checkout",
-        description: "Complete your purchase"
+        href: "/checkout"
       },
     ],
   },
@@ -158,32 +147,26 @@ export const navigationItems = [
     title: "Pages",
     href: "/pages",
     hasDropdown: true,
-    description: "Important pages",
     dropdownItems: [
       { 
         title: "About Us", 
-        href: "/about",
-        description: "Learn about our company"
+        href: "/about"
       },
       { 
         title: "Our Team", 
-        href: "/team",
-        description: "Meet our team members"
+        href: "/team"
       },
       { 
         title: "Services", 
-        href: "/services",
-        description: "What we offer"
+        href: "/services"
       },
       { 
         title: "FAQ", 
-        href: "/faq",
-        description: "Frequently asked questions"
+        href: "/faq"
       },
       { 
         title: "404 Page", 
-        href: "/404",
-        description: "Page not found"
+        href: "/404"
       },
     ],
   },
@@ -191,33 +174,27 @@ export const navigationItems = [
     title: "Collections",
     href: "/collections",
     hasDropdown: true,
-    description: "Product categories",
     dropdownItems: [
       { 
         title: "Furniture", 
         href: "/collections/furniture",
-        description: "Chairs, tables, sofas",
         badge: "Hot"
       },
       { 
         title: "Lighting", 
-        href: "/collections/lighting",
-        description: "Lamps and fixtures"
+        href: "/collections/lighting"
       },
       { 
         title: "Decor", 
-        href: "/collections/decor",
-        description: "Home decoration items"
+        href: "/collections/decor"
       },
       { 
         title: "Kitchen", 
-        href: "/collections/kitchen",
-        description: "Kitchen accessories"
+        href: "/collections/kitchen"
       },
       { 
         title: "Bathroom", 
-        href: "/collections/bathroom",
-        description: "Bathroom essentials"
+        href: "/collections/bathroom"
       },
     ],
   },
@@ -225,34 +202,97 @@ export const navigationItems = [
     title: "Blog",
     href: "/blog",
     hasDropdown: true,
-    description: "Latest news and articles",
     dropdownItems: [
       { 
         title: "Blog Grid", 
-        href: "/blog-grid",
-        description: "Grid layout for blog posts"
+        href: "/blog-grid"
       },
       { 
         title: "Blog List", 
-        href: "/blog-list",
-        description: "List layout for blog posts"
+        href: "/blog-list"
       },
       { 
         title: "Blog Single", 
-        href: "/blog-single",
-        description: "Individual blog post"
+        href: "/blog-single"
       },
       { 
         title: "Blog Sidebar", 
-        href: "/blog-sidebar",
-        description: "Blog with sidebar"
+        href: "/blog-sidebar"
       },
     ],
+  }
+];
+
+export const productss = [
+  {
+    id: 1,
+    img: "/images/jag1.jpg",
+    hoverImg: "/images/jag.jpg",
+    discount: "-20%",
+    name: "Storm Small Jug",
+    oldPrice: "€21.97",
+    newPrice: "€17.58",
   },
   {
-    title: "Contact",
-    href: "/contact",
-    hasDropdown: false,
-    description: "Get in touch with us",
+    id: 2,
+    img: "/images/table.jpg",
+    hoverImg: "/images/table1.jpg",
+    discount: "-10%",
+    name: "Elegant Vase",
+    oldPrice: "€30.00",
+    newPrice: "€21.00",
   },
+  {
+    id: 3,
+    img: "/images/lamp.jpg",
+    hoverImg: "/images/lamp1.jpg",
+    discount: "-20%",
+    name: "Elegant Vase",
+    oldPrice: "€30.00",
+    newPrice: "€21.00",
+  },
+  {
+    id: 4,
+    img: "/images/chairbig.jpg",
+    discount: "-10%",
+    name: "Elegant Vase",
+    oldPrice: "€30.00",
+    newPrice: "€21.00",
+  },
+  {
+    id: 5,
+    img: "/images/chair.jpg",
+    hoverImg: "/images/chair1.jpg",
+    discount: "-15%",
+    name: "Elegant Vase",
+    oldPrice: "€30.00",
+    newPrice: "€21.00",
+  },
+  {
+    id: 6,
+    img: "/images/basket.jpg",
+    hoverImg: "/images/basket.jpg",
+    discount: "-20%",
+    name: "Elegant Vase",
+    oldPrice: "€30.00",
+    newPrice: "€21.00",
+  },
+  {
+    id: 7,
+    img: "/images/jummar.jpg",
+    hoverImg: "/images/jummar.jpg",
+    discount: "-20%",
+    name: "Elegant Vase",
+    oldPrice: "€30.00",
+    newPrice: "€21.00",
+  },
+  {
+    id: 8,
+    img: "/images/smallchair1.jpg",
+    hoverImg: "/images/smallchiar.jpg",
+    discount: "-20%",
+    name: "Elegant Vase",
+    oldPrice: "€30.00",
+    newPrice: "€21.00",
+  }
 ];

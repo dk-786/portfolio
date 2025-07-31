@@ -1,7 +1,10 @@
 "use client"
-import Card from "@/components/Card";
 import Poster from "@/components/Poster";
+import Products from "@/components/common/Products";
+import Card from "@/components/common/Card";
 import Slider from "@/components/Slider";
+import Subscribe from "@/components/Subscribe";
+import Featuresection from "@/components/Featuresection";
 
 
 
@@ -11,6 +14,9 @@ export default function Home() {
       <Slider />
       <Card />
       <Poster />
+      <Products />
+      <Subscribe />
+      <Featuresection />
     </div>
   );
 }
