@@ -67,6 +67,192 @@ export const posters = [
     src: "/images/banner.jpg",
     alt: "Poster 6",
   }
-  
- 
+];
+
+// Language dropdown options
+export const languageOptions = [
+  { code: "en", name: "English", flag: "🇺🇸" },
+  { code: "es", name: "Spanish", flag: "🇪🇸" },
+  { code: "ar", name: "Arabic", flag: "🇸🇦" },
+  { code: "pt", name: "Portuguese", flag: "🇵🇹" },
+  { code: "ru", name: "Russian", flag: "🇷🇺" },
+];
+
+// Currency dropdown options
+export const currencyOptions = [
+  { code: "USD", symbol: "$", name: "USD $" },
+  { code: "GBP", symbol: "£", name: "GBP £" },
+  { code: "JPY", symbol: "¥", name: "JPY ¥" },
+  { code: "EUR", symbol: "€", name: "EUR €" },
+];
+
+// Social media links
+export const socialMediaLinks = [
+  { name: "Facebook", icon: "FaFacebook", href: "/", color: "hover:text-blue-600" },
+  { name: "Instagram", icon: "FaInstagram", href: "/", color: "hover:text-pink-600" },
+  { name: "Twitter", icon: "FaTwitter", href: "/", color: "hover:text-blue-400" },
+  { name: "Dribbble", icon: "FaBasketballBall", href: "/", color: "hover:text-pink-500" },
+];
+
+// Enhanced navigation items with more details
+export const navigationItems = [
+  {
+    title: "Home",
+    href: "/",
+    hasDropdown: true,
+    description: "Choose your home page style",
+    dropdownItems: [
+      { 
+        title: "Home 1", 
+        href: "/home-1",
+        description: "Modern minimalist design",
+        badge: "Popular"
+      },
+      { 
+        title: "Home 2", 
+        href: "/home-2",
+        description: "Classic elegant layout"
+      },
+      { 
+        title: "Home 3", 
+        href: "/home-3",
+        description: "Creative showcase style"
+      },
+    ],
+  },
+  {
+    title: "Shop",
+    href: "/shop",
+    hasDropdown: true,
+    description: "Browse our products",
+    dropdownItems: [
+      { 
+        title: "Shop Grid", 
+        href: "/shop-grid",
+        description: "Grid layout view"
+      },
+      { 
+        title: "Shop List", 
+        href: "/shop-list",
+        description: "List layout view"
+      },
+      { 
+        title: "Product Details", 
+        href: "/product-details",
+        description: "Individual product page"
+      },
+      { 
+        title: "Shopping Cart", 
+        href: "/cart",
+        description: "Your shopping cart",
+        badge: "New"
+      },
+      { 
+        title: "Checkout", 
+        href: "/checkout",
+        description: "Complete your purchase"
+      },
+    ],
+  },
+  {
+    title: "Pages",
+    href: "/pages",
+    hasDropdown: true,
+    description: "Important pages",
+    dropdownItems: [
+      { 
+        title: "About Us", 
+        href: "/about",
+        description: "Learn about our company"
+      },
+      { 
+        title: "Our Team", 
+        href: "/team",
+        description: "Meet our team members"
+      },
+      { 
+        title: "Services", 
+        href: "/services",
+        description: "What we offer"
+      },
+      { 
+        title: "FAQ", 
+        href: "/faq",
+        description: "Frequently asked questions"
+      },
+      { 
+        title: "404 Page", 
+        href: "/404",
+        description: "Page not found"
+      },
+    ],
+  },
+  {
+    title: "Collections",
+    href: "/collections",
+    hasDropdown: true,
+    description: "Product categories",
+    dropdownItems: [
+      { 
+        title: "Furniture", 
+        href: "/collections/furniture",
+        description: "Chairs, tables, sofas",
+        badge: "Hot"
+      },
+      { 
+        title: "Lighting", 
+        href: "/collections/lighting",
+        description: "Lamps and fixtures"
+      },
+      { 
+        title: "Decor", 
+        href: "/collections/decor",
+        description: "Home decoration items"
+      },
+      { 
+        title: "Kitchen", 
+        href: "/collections/kitchen",
+        description: "Kitchen accessories"
+      },
+      { 
+        title: "Bathroom", 
+        href: "/collections/bathroom",
+        description: "Bathroom essentials"
+      },
+    ],
+  },
+  {
+    title: "Blog",
+    href: "/blog",
+    hasDropdown: true,
+    description: "Latest news and articles",
+    dropdownItems: [
+      { 
+        title: "Blog Grid", 
+        href: "/blog-grid",
+        description: "Grid layout for blog posts"
+      },
+      { 
+        title: "Blog List", 
+        href: "/blog-list",
+        description: "List layout for blog posts"
+      },
+      { 
+        title: "Blog Single", 
+        href: "/blog-single",
+        description: "Individual blog post"
+      },
+      { 
+        title: "Blog Sidebar", 
+        href: "/blog-sidebar",
+        description: "Blog with sidebar"
+      },
+    ],
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+    hasDropdown: false,
+    description: "Get in touch with us",
+  },
 ];

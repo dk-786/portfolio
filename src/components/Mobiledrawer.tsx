@@ -52,6 +52,8 @@ const Mobiledrawer = ({ onSignIn, onRegister }: MobiledrawerProps) => {
 
   return (
     <div>
+      
+      
       {/* Mobile Menu Toggle Button */}
       <button
         onClick={toggleDrawer}
