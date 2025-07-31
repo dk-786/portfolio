@@ -61,6 +61,11 @@ export const posters = [
     id: 5,
     src: "/images/sofa.webp",
     alt: "Poster 5",
+  },
+  {
+    id: 6,
+    src: "/images/banner.jpg",
+    alt: "Poster 6",
   }
   
  
