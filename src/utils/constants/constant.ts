@@ -296,3 +296,284 @@ export const productss = [
     newPrice: "€21.00",
   }
 ];
+
+export const features = [
+  {
+    icon: "FaPlane",
+    title: "Free Worldwide Shipping",
+    description: "On all orders over $75.00",
+    link: "#",
+  },
+  {
+    icon: "FaCreditCard",
+    title: "100% Payment Secure",
+    description: "We ensure secure payment with PEV",
+    link: "#",
+  },
+  {
+    icon: "FaUndo",
+    title: "30 Days Return",
+    description: "Return it within 20 day for an exchange",
+    link: "#",
+  },
+];
+
+
+
+export const Blogmain1 = [
+  {
+    id: 1,
+    img: "/images/b-2.jpg",
+    date: "05 Aug, 2025",
+    title: "Turpis at eleifend leo mi elit Aenean porta ac sed faucibus",
+    description: `Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam risus,
+                  sit amet dictum ligula lorem non nisl Urna pretium elit mauris cursus Curabitur
+                  at elit Vestibulum Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                  veritatis et quas.Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam 
+                  risus, sit amet dictum ligula lorem non nisl. Ut vitae nibh id massa vulputate euismod 
+                  ut quis justo. Ut bibendum sem at massa lacinia, eget elementum ante consectetur. Nulla 
+                  id pharetra dui, at rhoncus urna. Maecenas non porttitor purus. Nullam ullamcorper nisl 
+                  quis ornare molestie.Etiam eget erat est. Phasellus elit justo, mattis non lorem non, 
+                  aliquam aliquam leo. Sed fermentum consectetur magna, eget semper ante. Aliquam scelerisque 
+                  justo velit. Fusce cursus blandit dolor, in sodales urna vulputate lobortis. Nulla ut tellus
+                  turpis. Nullam lacus sem, volutpat id odio sed, cursus tristique eros. Duis at pellentesque 
+                  magna. Donec magna nisi, vulputate ac nulla eu, ultricies tincidunt tellus. Nunc tincidunt sem 
+                  urna, nec venenatis libero vehicula ut.Vestibulum ante ipsum primis in faucibus orci luctus 
+                  et ultrices posuere cubilia Curae; Curabitur faucibus aliquam pulvinar. Vivamus mattis volutpat
+                  erat, et congue nisi semper quis. Cras vehicula dignissim libero in elementum. Mauris sit amet
+                  dolor justo. Morbi consequat velit vel est fermentum euismod. Curabitur in magna augue.`,
+    
+  },
+  {
+    id: 2,
+    img: "/images/b-3.jpg",
+    date: "05 Aug, 2025",
+    title: "Turpis at eleifend leo mi elit Aenean porta ac sed faucibus",
+    description: `Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam risus,
+                  sit amet dictum ligula lorem non nisl Urna pretium elit mauris cursus Curabitur
+                  at elit Vestibulum Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                  veritatis et quas.Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam 
+                  risus, sit amet dictum ligula lorem non nisl. Ut vitae nibh id massa vulputate euismod 
+                  ut quis justo. Ut bibendum sem at massa lacinia, eget elementum ante consectetur. Nulla 
+                  id pharetra dui, at rhoncus urna. Maecenas non porttitor purus. Nullam ullamcorper nisl 
+                  quis ornare molestie.Etiam eget erat est. Phasellus elit justo, mattis non lorem non, 
+                  aliquam aliquam leo. Sed fermentum consectetur magna, eget semper ante. Aliquam scelerisque 
+                  justo velit. Fusce cursus blandit dolor, in sodales urna vulputate lobortis. Nulla ut tellus
+                  turpis. Nullam lacus sem, volutpat id odio sed, cursus tristique eros. Duis at pellentesque 
+                  magna. Donec magna nisi, vulputate ac nulla eu, ultricies tincidunt tellus. Nunc tincidunt sem 
+                  urna, nec venenatis libero vehicula ut.Vestibulum ante ipsum primis in faucibus orci luctus 
+                  et ultrices posuere cubilia Curae; Curabitur faucibus aliquam pulvinar. Vivamus mattis volutpat
+                  erat, et congue nisi semper quis. Cras vehicula dignissim libero in elementum. Mauris sit amet
+                  dolor justo. Morbi consequat velit vel est fermentum euismod. Curabitur in magna augue.`,
+    
+  },
+  {
+    id: 3,
+    img: "/images/b-4.jpg",
+    date: "05 Aug, 2025",
+    title: "Turpis at eleifend leo mi elit Aenean porta ac sed faucibus",
+    description: `Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam risus,
+                  sit amet dictum ligula lorem non nisl Urna pretium elit mauris cursus Curabitur
+                  at elit Vestibulum Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                  veritatis et quas.Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam 
+                  risus, sit amet dictum ligula lorem non nisl. Ut vitae nibh id massa vulputate euismod 
+                  ut quis justo. Ut bibendum sem at massa lacinia, eget elementum ante consectetur. Nulla 
+                  id pharetra dui, at rhoncus urna. Maecenas non porttitor purus. Nullam ullamcorper nisl 
+                  quis ornare molestie.Etiam eget erat est. Phasellus elit justo, mattis non lorem non, 
+                  aliquam aliquam leo. Sed fermentum consectetur magna, eget semper ante. Aliquam scelerisque 
+                  justo velit. Fusce cursus blandit dolor, in sodales urna vulputate lobortis. Nulla ut tellus
+                  turpis. Nullam lacus sem, volutpat id odio sed, cursus tristique eros. Duis at pellentesque 
+                  magna. Donec magna nisi, vulputate ac nulla eu, ultricies tincidunt tellus. Nunc tincidunt sem 
+                  urna, nec venenatis libero vehicula ut.Vestibulum ante ipsum primis in faucibus orci luctus 
+                  et ultrices posuere cubilia Curae; Curabitur faucibus aliquam pulvinar. Vivamus mattis volutpat
+                  erat, et congue nisi semper quis. Cras vehicula dignissim libero in elementum. Mauris sit amet
+                  dolor justo. Morbi consequat velit vel est fermentum euismod. Curabitur in magna augue.`,
+    
+  },
+  {
+    id: 4,
+    img: "/images/b-6.jpg",
+    date: "05 Aug, 2025",
+    title: "Turpis at eleifend leo mi elit Aenean porta ac sed faucibus",
+    description: `Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam risus,
+                  sit amet dictum ligula lorem non nisl Urna pretium elit mauris cursus Curabitur
+                  at elit Vestibulum Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                  veritatis et quas.Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam 
+                  risus, sit amet dictum ligula lorem non nisl. Ut vitae nibh id massa vulputate euismod 
+                  ut quis justo. Ut bibendum sem at massa lacinia, eget elementum ante consectetur. Nulla 
+                  id pharetra dui, at rhoncus urna. Maecenas non porttitor purus. Nullam ullamcorper nisl 
+                  quis ornare molestie.Etiam eget erat est. Phasellus elit justo, mattis non lorem non, 
+                  aliquam aliquam leo. Sed fermentum consectetur magna, eget semper ante. Aliquam scelerisque 
+                  justo velit. Fusce cursus blandit dolor, in sodales urna vulputate lobortis. Nulla ut tellus
+                  turpis. Nullam lacus sem, volutpat id odio sed, cursus tristique eros. Duis at pellentesque 
+                  magna. Donec magna nisi, vulputate ac nulla eu, ultricies tincidunt tellus. Nunc tincidunt sem 
+                  urna, nec venenatis libero vehicula ut.Vestibulum ante ipsum primis in faucibus orci luctus 
+                  et ultrices posuere cubilia Curae; Curabitur faucibus aliquam pulvinar. Vivamus mattis volutpat
+                  erat, et congue nisi semper quis. Cras vehicula dignissim libero in elementum. Mauris sit amet
+                  dolor justo. Morbi consequat velit vel est fermentum euismod. Curabitur in magna augue.`,
+    
+  },
+  {
+    id: 5,
+    img: "/images/b-7.jpg",
+    date: "05 Aug, 2025",
+    title: "Turpis at eleifend leo mi elit Aenean porta ac sed faucibus",
+    description: `Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam risus,
+                  sit amet dictum ligula lorem non nisl Urna pretium elit mauris cursus Curabitur
+                  at elit Vestibulum Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                  veritatis et quas.Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam 
+                  risus, sit amet dictum ligula lorem non nisl. Ut vitae nibh id massa vulputate euismod 
+                  ut quis justo. Ut bibendum sem at massa lacinia, eget elementum ante consectetur. Nulla 
+                  id pharetra dui, at rhoncus urna. Maecenas non porttitor purus. Nullam ullamcorper nisl 
+                  quis ornare molestie.Etiam eget erat est. Phasellus elit justo, mattis non lorem non, 
+                  aliquam aliquam leo. Sed fermentum consectetur magna, eget semper ante. Aliquam scelerisque 
+                  justo velit. Fusce cursus blandit dolor, in sodales urna vulputate lobortis. Nulla ut tellus
+                  turpis. Nullam lacus sem, volutpat id odio sed, cursus tristique eros. Duis at pellentesque 
+                  magna. Donec magna nisi, vulputate ac nulla eu, ultricies tincidunt tellus. Nunc tincidunt sem 
+                  urna, nec venenatis libero vehicula ut.Vestibulum ante ipsum primis in faucibus orci luctus 
+                  et ultrices posuere cubilia Curae; Curabitur faucibus aliquam pulvinar. Vivamus mattis volutpat
+                  erat, et congue nisi semper quis. Cras vehicula dignissim libero in elementum. Mauris sit amet
+                  dolor justo. Morbi consequat velit vel est fermentum euismod. Curabitur in magna augue.`,
+    
+  },
+  {
+    id: 6,
+    img: "/images/b-8.jpg",
+    date: "05 Aug, 2025",
+    title: "Turpis at eleifend leo mi elit Aenean porta ac sed faucibus",
+    description: `Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam risus,
+                  sit amet dictum ligula lorem non nisl Urna pretium elit mauris cursus Curabitur
+                  at elit Vestibulum Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                  veritatis et quas.Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam 
+                  risus, sit amet dictum ligula lorem non nisl. Ut vitae nibh id massa vulputate euismod 
+                  ut quis justo. Ut bibendum sem at massa lacinia, eget elementum ante consectetur. Nulla 
+                  id pharetra dui, at rhoncus urna. Maecenas non porttitor purus. Nullam ullamcorper nisl 
+                  quis ornare molestie.Etiam eget erat est. Phasellus elit justo, mattis non lorem non, 
+                  aliquam aliquam leo. Sed fermentum consectetur magna, eget semper ante. Aliquam scelerisque 
+                  justo velit. Fusce cursus blandit dolor, in sodales urna vulputate lobortis. Nulla ut tellus
+                  turpis. Nullam lacus sem, volutpat id odio sed, cursus tristique eros. Duis at pellentesque 
+                  magna. Donec magna nisi, vulputate ac nulla eu, ultricies tincidunt tellus. Nunc tincidunt sem 
+                  urna, nec venenatis libero vehicula ut.Vestibulum ante ipsum primis in faucibus orci luctus 
+                  et ultrices posuere cubilia Curae; Curabitur faucibus aliquam pulvinar. Vivamus mattis volutpat
+                  erat, et congue nisi semper quis. Cras vehicula dignissim libero in elementum. Mauris sit amet
+                  dolor justo. Morbi consequat velit vel est fermentum euismod. Curabitur in magna augue.`,
+    
+  },
+  {
+    id: 7,
+    img: "/images/b-9.jpg",
+    date: "05 Aug, 2025",
+    title: "Turpis at eleifend leo mi elit Aenean porta ac sed faucibus",
+    description: `Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam risus,
+                  sit amet dictum ligula lorem non nisl Urna pretium elit mauris cursus Curabitur
+                  at elit Vestibulum Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                  veritatis et quas.Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam 
+                  risus, sit amet dictum ligula lorem non nisl. Ut vitae nibh id massa vulputate euismod 
+                  ut quis justo. Ut bibendum sem at massa lacinia, eget elementum ante consectetur. Nulla 
+                  id pharetra dui, at rhoncus urna. Maecenas non porttitor purus. Nullam ullamcorper nisl 
+                  quis ornare molestie.Etiam eget erat est. Phasellus elit justo, mattis non lorem non, 
+                  aliquam aliquam leo. Sed fermentum consectetur magna, eget semper ante. Aliquam scelerisque 
+                  justo velit. Fusce cursus blandit dolor, in sodales urna vulputate lobortis. Nulla ut tellus
+                  turpis. Nullam lacus sem, volutpat id odio sed, cursus tristique eros. Duis at pellentesque 
+                  magna. Donec magna nisi, vulputate ac nulla eu, ultricies tincidunt tellus. Nunc tincidunt sem 
+                  urna, nec venenatis libero vehicula ut.Vestibulum ante ipsum primis in faucibus orci luctus 
+                  et ultrices posuere cubilia Curae; Curabitur faucibus aliquam pulvinar. Vivamus mattis volutpat
+                  erat, et congue nisi semper quis. Cras vehicula dignissim libero in elementum. Mauris sit amet
+                  dolor justo. Morbi consequat velit vel est fermentum euismod. Curabitur in magna augue.`,
+    
+  }
+];
+
+export const brandlogo = [
+    {
+      id: 1,
+      img: "/images/1-brand_default.jpg",
+    },
+    {
+      id: 2,
+      img: "/images/2-brand_default.jpg",
+    },
+    {
+      id: 3,
+      img: "/images/3-brand_default.jpg",
+    },
+    {
+      id: 4,
+      img: "/images/4-brand_default.jpg",
+    },
+    {
+      id: 5,
+      img: "/images/5-brand_default.jpg",
+    },
+    {
+      id: 6,
+      img: "/images/6-brand_default.jpg",
+    }
+  
+];
+
+export const follow = [
+  {
+    id: 1,
+    img: "/images/i1.jpg",
+  },
+  {
+    id: 2,
+    img: "/images/i2.jpg",
+  },
+  {
+    id: 3,
+    img: "/images/i3.jpg",
+  },
+  {
+    id: 4,
+    img: "/images/i4.jpg",
+  },
+  {
+    id: 5,
+    img: "/images/i5.jpg",
+  },
+  {
+    id: 6,
+    img: "/images/i6.jpg",
+  }
+];
+
+// footerData.js
+export const footerLinks = {
+  customerServices: [
+    "My Account",
+    "Track Your Order",
+    "FAQs",
+    "Payment Methods",
+    "Shipping Guide",
+    "Products Support",
+    "Gift Card Balance",
+  ],
+  moreFromRubix: [
+    "About Rubix",
+    "Our Guarantees",
+    "Terms and Conditions",
+    "Privacy Policy",
+    "Return Policy",
+    "Delivery & Return",
+    "Sitemap",
+  ],
+};
+
+export const socialLinks = [
+  { icon: "FaFacebookF", url: "#" },
+  { icon: "FaInstagram", url: "#" },
+  { icon: "FaDribbble", url: "#" },
+  { icon: "FaYoutube", url: "#" },
+];
+
+
+

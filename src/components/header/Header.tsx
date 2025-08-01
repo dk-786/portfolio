@@ -5,7 +5,7 @@ import { CiUser } from "react-icons/ci";
 import { FaRegHeart } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 import { AiOutlineShopping } from "react-icons/ai";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { navigationItems, languageOptions, currencyOptions } from "@/utils/constants/constant";
 import {
   FaFacebook,
@@ -30,11 +30,11 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import Mobiledrawer from "./Mobiledrawer";
-import Showmodal from "./modals/Showmodal";
-import Showmodaleye from "./modals/Showmodaleye";
-import Showforgotmodal from "./modals/Showforgotmodal";
-import Showsearch from "./modals/Showsearch";
+import Mobiledrawer from "../Mobiledrawer";
+import Showmodal from "../modals/Showmodal";
+import Showmodaleye from "../modals/Showmodaleye";
+import Showforgotmodal from "../modals/Showforgotmodal";
+import Showsearch from "../modals/Showsearch";
 
 
 const Header = () => {

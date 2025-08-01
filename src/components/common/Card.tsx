@@ -4,6 +4,7 @@ import { IoMdRefresh } from "react-icons/io";
 import { BsCart } from "react-icons/bs";
 import { AiOutlineEye } from "react-icons/ai";
 import { products } from "@/utils/constants/constant";
+import { productss } from "@/utils/constants/constant";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -83,7 +84,7 @@ export const ProductCardItem = ({ product, isMobile = false, hovered, setHovered
         <h3 className="text-gray-800 font-medium text-lg hover:text-[#a67c00] ">
           {product.name}
         </h3>
-        <div className="flex items-center ">
+        <div className="flex items-center gap-2">
           <p className="text-gray-400 line-through text-sm">
             {product.oldPrice}
           </p>
@@ -110,10 +111,11 @@ const ProductCard = () => {
           modules={[Navigation]}
           slidesPerView={1}
           spaceBetween={0}
+          loop={true}
           navigation={false}
           className=" w-full"
         >
-          {products.map((product, idx) => (
+          {productss.map((product, idx) => (
             <SwiperSlide key={product.id} className="!w-full p-6">
               <ProductCardItem
                 product={product}

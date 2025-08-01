@@ -73,7 +73,7 @@ const Slider = () => {
           delay: 4000,
           disableOnInteraction: false,
         }}
-        loop={false}
+        loop={true}
         className="h-full"
       >
         {images.map((image, index) => (

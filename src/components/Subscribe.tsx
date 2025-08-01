@@ -3,7 +3,7 @@ import React from 'react'
 const Subscribe = () => {
   return (
     <section
-      className="relative flex items-center justify-center w-full h-[400px] md:h-[580px] bg-cover bg-center bg-no-repeat bg-fixed"
+      className="relative flex items-center justify-center w-full h-[400px] md:h-[580px] bg-cover bg-center bg-no-repeat md:bg-fixed "
       style={{ 
         backgroundImage: "url('/images/background.webp')",
         backgroundSize: 'cover',

@@ -22,6 +22,7 @@ const Products = () => {
           spaceBetween={0}
           navigation={false}
           className=" w-full"
+          loop={true}
         >
           {productss.map((product, idx) => (
             <SwiperSlide key={product.id} className="!w-full p-6">
