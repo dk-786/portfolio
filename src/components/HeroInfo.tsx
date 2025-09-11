@@ -66,7 +66,7 @@ const FindWithMe = memo(function FindWithMe() {
             key={label}
             href={href}
             aria-label={label}
-            className="bg-white text-black p-3 rounded-lg hover:bg-yellow-400 transition"
+            className="bg-white text-black p-3 rounded-lg hover:bg-yellow-400 transition cursor-pointer"
           >
             <Icon />
           </a>

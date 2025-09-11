@@ -26,9 +26,8 @@ const HeroAbout = () => {
                         fill
                         className="object-contain animate-spin-slow"
                     />
-                    {/* Centered down arrow */}
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <div className="text-yellow-400 text-4xl">↓</div>
+                    <div className="absolute inset-0 flex items-center justify-center cursor-pointer">
+                        <div className="text-yellow-400 text-4xl ">↓</div>
                     </div>
                 </div>
                 <style jsx global>{`
