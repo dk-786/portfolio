@@ -4,12 +4,12 @@ import React from "react";
 
 export default function HeroIntro() {
     return (
-        <section className=" relative w-full  bg-[#171818] text-white px-8 md:px-16 lg:px-24 py-0 lg:py-44 ">
+        <section className=" relative w-full  bg-[#171818] text-white  py-0 lg:py-44 ">
             <div className="flex flex-col md:flex-row items-center justify-between ">
                 {/* Left Side */}
                 <div className="flex flex-col text-left w-full gap-2 scale-y-125">
                     <h2 className="text-5xl md:text-5xl font-extrabold uppercase tracking-wide text-transparent stroke-text ">
-                        Hello World! I'm
+                        Hello World! I&apos;m
                     </h2>
                     <h1 className="flex items-center  text-5xl md:text-5xl font-extrabold uppercase gap-6  ">
                         Darshak
@@ -27,7 +27,6 @@ export default function HeroIntro() {
                 </div>
 
                 <div className="relative flex flex-col text-right  mt-32 w-full scale-y-125">
-
                     <h1 className="text-5xl md:text-5xl font-extrabold uppercase">
                         Web Developer
                     </h1>

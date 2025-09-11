@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="text-white mt-30">
       <div className="w-full bg-[#111212]">
-        <div className="extra_container max-w-6xl mx-auto flex flex-col md:flex-row">
+        <div className="extra_container max-w-7xl mx-auto flex flex-col md:flex-row">
           {/* Left Side */}
           <div className="w-full md:w-1/2 md:pr-16 py-20 px-6">
             <h2 className="text-2xl font-semibold leading-snug mb-10 underline underline-offset-8">

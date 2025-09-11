@@ -10,7 +10,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { useEffect, useCallback, useState, memo } from "react";
+import { useEffect, useCallback, useState } from "react";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -34,10 +34,10 @@ const Navbar = () => {
           : "px-[75px] py-[40px] rounded-b-[40px]"
       }`}
     >
-      <div className="relative z-10 flex w-full h-full items-center justify-between">
+      <div className="relative z-10  flex w-full   items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-3 border-[#343434] border-r h-full pr-9 cursor-pointer"
+          className="flex items-center gap-3  border-[#343434] border-r  pr-9  cursor-pointer"
           aria-label="Home"
         >
           <Image
@@ -49,7 +49,6 @@ const Navbar = () => {
             unoptimized
           />
         </Link>
-
         <NavigationMenu className="hidden md:flex md:flex-1">
           <NavigationMenuList className="flex gap-5">
             {navItems.map((item) => (

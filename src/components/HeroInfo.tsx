@@ -2,41 +2,9 @@
 
 import React, { memo } from "react";
 import Image from "next/image";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-  FaBehance,
-} from "react-icons/fa";
+import { FaArrowDownLong } from "react-icons/fa6";
+import { ABOUT_ME, WHAT_I_DO, CONTACT_ME, SOCIALS } from "@/utils/constant/constant";
 
-const SOCIALS = [
-  {
-    href: "#",
-    label: "Facebook",
-    icon: <FaFacebookF />,
-  },
-  {
-    href: "#",
-    label: "Twitter",
-    icon: <FaTwitter />,
-  },
-  {
-    href: "#",
-    label: "Instagram",
-    icon: <FaInstagram />,
-  },
-  {
-    href: "#",
-    label: "LinkedIn",
-    icon: <FaLinkedinIn />,
-  },
-  {
-    href: "#",
-    label: "Behance",
-    icon: <FaBehance />,
-  },
-];
 
 const InfoSection = memo(function InfoSection({
   title,
@@ -48,9 +16,9 @@ const InfoSection = memo(function InfoSection({
   align?: "left" | "right";
 }) {
   return (
-    <div className="flex flex-col gap-3 ">
+    <div className="flex flex-col gap-3">
       <div
-        className={`w-10 h-10 border-2 border-[#959595] rounded-full flex items-center justify-center relative  ${
+        className={`w-10 h-10 border-2 border-[#959595] rounded-full flex items-center justify-center relative ${
           align === "right" ? "ml-auto" : ""
         }`}
       >
@@ -65,33 +33,26 @@ const InfoSection = memo(function InfoSection({
 
 const AboutMe = memo(function AboutMe() {
   return (
-    <InfoSection title="About Me">
-      <p className="text-gray-300 leading-relaxed">
-        Hello, my name’s Nikolas, I'm a web designer and developer.
-        Duis dolor in reprehenderit velit in esse cillum fugiat nulla pariatur.
-      </p>
+    <InfoSection title={ABOUT_ME.title}>
+      <p className="text-[#959595] leading-relaxed">{ABOUT_ME.description}</p>
     </InfoSection>
   );
 });
 
 const WhatIDo = memo(function WhatIDo() {
   return (
-    <InfoSection title="What I Do">
-      <p className="text-gray-300 leading-relaxed">
-        Website Design & Logo / Mobile Application Design / UI/UX Mobile Design /
-        Web Developments / Brand Identity
-      </p>
+    <InfoSection title={WHAT_I_DO.title}>
+      <p className="text-[#959595] leading-relaxed">{WHAT_I_DO.description}</p>
     </InfoSection>
   );
 });
 
 const ContactMe = memo(function ContactMe() {
   return (
-    <InfoSection title="Contact Me" align="right">
-      <p className="text-gray-300">Address: 45 Kofi Annan St, Ghana</p>
-      <p className="text-gray-300">Email: contact@example.com</p>
-      <p className="text-gray-300">nikolasraio@gmail.com</p>
-      <p className="text-gray-300">Telephone number: 004-400-45</p>
+    <InfoSection title={CONTACT_ME.title} align="right">
+      <p className="text-[#959595]">Address: {CONTACT_ME.address}</p>
+      <p className="text-[#959595]">Email: {CONTACT_ME.email}</p>
+      <p className="text-[#959595]">Telephone number: {CONTACT_ME.phone}</p>
     </InfoSection>
   );
 });
@@ -100,14 +61,14 @@ const FindWithMe = memo(function FindWithMe() {
   return (
     <InfoSection title="Find With Me" align="right">
       <div className="flex gap-3 lg:justify-end">
-        {SOCIALS.map(({ href, label, icon }) => (
+        {SOCIALS.map(({ href, label, icon: Icon }) => (
           <a
             key={label}
             href={href}
             aria-label={label}
             className="bg-white text-black p-3 rounded-lg hover:bg-yellow-400 transition"
           >
-            {icon}
+            <Icon />
           </a>
         ))}
       </div>
@@ -118,14 +79,14 @@ const FindWithMe = memo(function FindWithMe() {
 const CenterImage = memo(function CenterImage() {
   return (
     <div className="flex items-center justify-center">
-      <div className="rounded-4xl bg-[#171818] h-[500px] w-[500px] flex items-center justify-center shadow-lg">
+      <div className="rounded-4xl bg-[#171818] h-[420px] w-[600px] flex items-center justify-center shadow-lg">
         <div className="rounded-3xl overflow-hidden w-full h-full flex items-center justify-center">
           <Image
             src="/user/1.png"
             alt="Profile"
-            width={500}
-            height={500}
-            className="object-cover w-full h-full"
+            width={600}
+            height={420}
+            className="object-contain w-full h-full"
             priority
           />
         </div>
@@ -136,29 +97,28 @@ const CenterImage = memo(function CenterImage() {
 
 function HeroInfo() {
   return (
-    <section className="relative w-full nicolas_sm_hero text-white py-20 h-[724px]">
-      {/* Overlay Background */}
+    <section className="relative w-full nicolas_sm_hero text-white py-20 h-[724px] p-15">
+      <div className="absolute -top-14 -left-0 text-xl flex gap-2 items-center z-20">
+        <span className="text-white mb-2">01 // 09 - scroll</span>
+        <FaArrowDownLong className="animate-bounce w-6 h-6" />
+      </div>
+
       <div className="overlay_bg absolute inset-0 rounded-[40px]" />
 
-      {/* Content */}
-      <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-10 z-10 h-full w-full px-0 md:px-0 lg:px-0">
-        {/* Left Column */}
-        <div className="flex flex-col justify-between w-60">
+      <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-10 z-10 h-full w-full">
+        <div className="flex flex-col justify-between w-60 pr-8">
           <AboutMe />
           <WhatIDo />
         </div>
 
-        {/* Center Image */}
         <CenterImage />
 
-        {/* Right Column */}
-        <div className="flex flex-col justify-between h-full text-left lg:text-right">
+        <div className="flex flex-col justify-between h-full text-left lg:text-right pl-8">
           <ContactMe />
           <FindWithMe />
         </div>
       </div>
 
-      {/* Custom CSS */}
       <style jsx>{`
         .overlay_bg::before {
           content: "";

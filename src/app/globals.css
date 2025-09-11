@@ -147,5 +147,8 @@
   z-index: 10; /* keep content above overlay */
 }
 
+.text-stroke-black-2 {
+  -webkit-text-stroke: 2px #000;
+}
 
 

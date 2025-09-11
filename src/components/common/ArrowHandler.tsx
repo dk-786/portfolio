@@ -6,11 +6,11 @@ export default function ArrowHandler() {
   const [circlePos, setCirclePos] = useState({ x: -100, y: -100 });
   const [isPointerTarget, setIsPointerTarget] = useState(false); 
   useEffect(() => {
-    const onMove = (e: any) => {
-      const x = e.clientX ?? (e.touches && e.touches[0].clientX) ?? 0;
-      const y = e.clientY ?? (e.touches && e.touches[0].clientY) ?? 0;
+    const onMove = (e: PointerEvent | TouchEvent) => {
+      const x = 'clientX' in e ? e.clientX : (e.touches && e.touches[0].clientX) ?? 0;
+      const y = 'clientY' in e ? e.clientY : (e.touches && e.touches[0].clientY) ?? 0;
 
-      let el: HTMLElement | null = e.target;
+      let el: HTMLElement | null = e.target as HTMLElement;
       let pointerTarget = false;
       while (el) {
         if (el.classList?.contains("cursor-pointer")) {
