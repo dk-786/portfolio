@@ -29,7 +29,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             <div className="flex justify-between items-start px-5 py-6 relative">
                 <div>
                     <p className="text-xs font-semibold uppercase tracking-wide text-[#ffbd4a] hover:text-white transition cursor-pointer">
-                        // {project.category}
+                        {`// ${project.category}`}
                     </p>
                     <h3 className="text-2xl font-semibold text-white mt-2 hover:text-[#ffbd4a] transition cursor-pointer">
                         {project.title}
