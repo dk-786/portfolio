@@ -3,7 +3,8 @@ import HeroAbout from "@/components/HeroAbout";
 import HeroInfo from "@/components/HeroInfo";
 import HeroIntro from "@/components/HeroIntro";
 import HeroMarque from "@/components/HeroMarque";
-import React from "react";
+import Service from "@/components/Service";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -11,11 +12,18 @@ export default function Home() {
       <Container>
         <HeroIntro />
         <HeroInfo />
-     
         <HeroAbout />
-        </Container>
-  
-      <HeroMarque/>
+      </Container>
+
+      <HeroMarque />
+
+      <Container>
+        <Service />
+      </Container>
+
+      <Projects />
+      
+
     </>
   );
 }

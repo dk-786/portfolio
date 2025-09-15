@@ -7,7 +7,7 @@ import {stats} from "@/utils/constant/constant"
 const StatItem = ({ label, icon }: { label?: string; icon?: boolean }) => {
   if (icon) {
     return (
-      <span className="text-5xl transition-colors duration-500 hover:text-white hover:text-stroke-black-2">
+      <span className="text-5xl transition-colors duration-500 ">
         ✦
       </span>
     );
