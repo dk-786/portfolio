@@ -54,7 +54,7 @@ const Service = () => {
               {/* Hover Image */}
               {hoveredIndex === index && (
                 <div
-                  className="absolute z-10 pointer-events-none transition-opacity duration-300 ease-out"
+                  className="absolute z-10  pointer-events-none transition-opacity duration-300 ease-out"
                   style={{
                     top: mouseY,
                     right: 0,
@@ -66,7 +66,7 @@ const Service = () => {
                     alt={item.title}
                     width={320}
                     height={320}
-                    className="object-cover rounded-xl shadow-lg"
+                    className="object-cover rounded-xl shadow-lg aspect-square"
                   />
                 </div>
               )}
