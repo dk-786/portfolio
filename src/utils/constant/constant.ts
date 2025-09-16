@@ -131,3 +131,38 @@ export const projects = [
     image: "/user/6.jpg",
   },
 ];
+export const testimonials = [
+  {
+    id: 1,
+    name: "Jhonson Smith",
+    role: "Web Developer",
+    feedback:
+      "Duis aute irure dolor in velit esse dolore eu fugiat nulla pariatur. excepteur cupidatats non proident, sunt in culpa qui deserunt a mollit anim id est laborum.",
+    avatar: "/user/7.jpg",
+  },
+  {
+    id: 2,
+    name: "Jonas Morgan",
+    role: "Web Developer",
+    feedback:
+      "Duis aute irure dolor in velit esse dolore eu fugiat nulla pariatur. excepteur cupidatats non proident, sunt in culpa qui deserunt a mollit anim id est laborum.",
+    avatar: "/user/8.jpg",
+  },
+  {
+    id: 3,
+    name: "Nicolas Jhon",
+    role: "Web Developer",
+    feedback:
+      "Duis aute irure dolor in velit esse dolore eu fugiat nulla pariatur. excepteur cupidatats non proident, sunt in culpa qui deserunt a mollit anim id est laborum.",
+    avatar: "/user/9.jpg",
+  },
+];
+
+export const customers = [
+  { num: "1", title: "LinkedIn", img: "/user/linkedin.png" },
+  { num: "2", title: "Walmart", img: "/user/walmart.png" },
+  { num: "3", title: "Amazon", img: "/user/amazon.png" },
+  { num: "4", title: "Slack", img: "/user/slack.png" },
+  { num: "5", title: "Google", img: "/user/google.png" },
+];
+
