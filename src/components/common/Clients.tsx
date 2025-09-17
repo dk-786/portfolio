@@ -58,7 +58,7 @@ const Clients: React.FC<ClientsProps> = ({
     <section className="text-white w-full px-6 pt-20 border-t border-[#2F3030] mt-20">
       <div className="flex justify-between items-center mb-16">
         <div className="w-1/6 text-lg uppercase">
-          {sectionNumber} / {sectionTitle}
+        {sectionNumber} {"//"} {sectionTitle}
         </div>
         <div className="space-y-6 w-3/5 ml-10 text-center">
           <p className="text-xl md:text-1xl lg:text-2xl font-bold indent-40">

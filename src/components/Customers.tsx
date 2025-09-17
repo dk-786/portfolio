@@ -26,7 +26,7 @@ const Customers: React.FC<ServiceProps> = ({
             <Container>
                 <div className="w-full flex justify-between px-6 py-20 border-t border-[#dcdad4] ">
                     <div className="w-1/6 text-lg">
-                        {sectionNumber} / {sectionTitle}
+                    {sectionNumber} {"//"} {sectionTitle}   
                     </div>
                     <div className="space-y-6 w-2/3">
                         <p className="text-xl md:text-1xl lg:text-2xl font-medium indent-40">

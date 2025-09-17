@@ -166,3 +166,66 @@ export const customers = [
   { num: "5", title: "Google", img: "/user/google.png" },
 ];
 
+export const myPricingPlans = [
+  {
+    id: 1,
+    name: "Basic Plan",
+    price: 25,
+    features: [
+      "Web Development",
+      "Mobile Development",
+      "Advertising",
+      "Graphic design",
+      "Project management",
+    ],
+  },
+  {
+    id: 2,
+    name: "Standard Plan",
+    price: 75,
+    features: [
+      "Web Development",
+      "Mobile Development",
+      "Advertising",
+      "Graphic design",
+      "Project management",
+    ],
+  },
+  {
+    id: 3,
+    name: "Gold Plan",
+    price: 125,
+    features: [
+      "Web Development",
+      "Mobile Development",
+      "Advertising",
+      "Graphic design",
+      "Project management",
+    ],
+  },
+];
+
+export const blogPosts = [
+  {
+    id: 1,
+    date: "January 26, 2024",
+    title: "Digital and physical brand design",
+    image: "/user/10.jpg",
+    link: "/blog/brand-design",
+  },
+  {
+    id: 2,
+    date: "January 26, 2024",
+    title: "The transformation of mobile app designing",
+    image: "/user/11.jpg",
+    link: "/blog/mobile-app",
+  },
+  {
+    id: 3,
+    date: "January 26, 2024",
+    title: "A beginner’s guide to running adventures",
+    image: "/user/12.jpg",
+    link: "/blog/running-adventures",
+  },
+];
+

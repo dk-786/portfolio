@@ -118,6 +118,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -132,28 +133,37 @@
   height: 100%;
   background-image: url("https://nikolas-next.vercel.app/_next/static/media/pattern.25aa6280.png");
   background-repeat: repeat;
-  opacity: 0.3; /* adjust intensity */
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  opacity: 0.3;
+  /* adjust intensity */
   z-index: 1;
   transition: all 0.3s ease;
 }
-.header-noise.scrolled::before {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+
+/* ✅ Only large screens (lg: ≥1024px) get rounded bottom */
+@media (min-width: 1024px) {
+  .header-noise::before {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  .header-noise.scrolled::before {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
-.header-noise > .relative {
+.header-noise>.relative {
   position: relative;
-  z-index: 10; 
+  z-index: 10;
 }
 
 .text-stroke-black-2 {
   -webkit-text-stroke: 2px #000;
 }
+
 .stroke-text {
-  -webkit-text-stroke: 2px white; 
-  color: transparent;            
+  -webkit-text-stroke: 2px white;
+  color: transparent;
 }
 
 
@@ -163,6 +173,7 @@
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -178,4 +189,3 @@
   cursor: pointer !important;
   pointer-events: auto !important;
 }
-

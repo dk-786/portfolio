@@ -11,12 +11,12 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { useEffect, useCallback, useState } from "react";
+import MobileNavbar from "./MobileDrawer";
 
 const Navbar = () => {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
 
-  // Use useCallback for stable reference
   const handleScroll = useCallback(() => {
     setScrolled(window.scrollY > 10);
   }, []);
@@ -31,13 +31,13 @@ const Navbar = () => {
       className={`fixed top-0 left-0 w-full flex items-center justify-between border-b border-[#343434] bg-[#171818] text-white shadow-md header-noise transition-all duration-300 z-50 ${
         scrolled
           ? "px-[75px] py-[30px] rounded-none scrolled"
-          : "px-[75px] py-[40px] rounded-b-[40px]"
+          : "px-[75px] py-[30px] rounded-none  lg:px-[75px] lg:py-[40px] lg:rounded-b-[40px]"
       }`}
     >
-      <div className="relative z-10  flex w-full   items-center justify-between">
+      <div className="relative z-10  flex w-full  items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-3  border-[#343434] border-r  pr-9  cursor-pointer"
+          className="flex items-center gap-3 lg:border-r border-[#343434] pr-9 cursor-pointer"
           aria-label="Home"
         >
           <Image
@@ -49,7 +49,7 @@ const Navbar = () => {
             unoptimized
           />
         </Link>
-        <NavigationMenu className="hidden md:flex md:flex-1">
+        <NavigationMenu className="hidden lg:flex lg:flex-1">
           <NavigationMenuList className="flex gap-5">
             {navItems.map((item) => (
               <NavigationMenuItem key={item.href}>
@@ -70,9 +70,12 @@ const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div className="relative border-l border-[#343434] h-full pl-9 flex items-center justify-end">
-          <Button className="bg-[#ffbd4a] text-black text-lg font-bold px-11 py-7 rounded-md hover:bg-white transition duration-500 flex items-center gap-2 cursor-pointer">
-            Let&apos;s talk
+        <div className="relative lg:border-l border-[#343434] h-full pl-9 flex items-center justify-end">
+          <div className="lg:hidden">
+            <MobileNavbar/>
+          </div>
+          <Button className="hidden lg:flex bg-[#ffbd4a] text-black text-lg font-bold px-11 py-7 rounded-md hover:bg-white transition duration-500 items-center gap-2 cursor-pointer">
+            Let's talk
             <Image
               src="/user/arrow.png"
               alt="Arrow"
@@ -85,5 +88,5 @@ const Navbar = () => {
       </div>
     </header>
   );
-}
+};
 export default Navbar;

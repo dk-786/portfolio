@@ -4,7 +4,7 @@ import React from "react";
 
 export default function HeroIntro() {
     return (
-        <section className=" relative w-full  bg-[#171818] text-white  py-0 lg:py-44 ">
+        <section className=" relative w-full   bg-[#171818] text-white py-44 ">
             <div className="flex flex-col md:flex-row items-center justify-between ">
                 {/* Left Side */}
                 <div className="flex flex-col text-left w-full gap-2 scale-y-125">
@@ -13,7 +13,7 @@ export default function HeroIntro() {
                     </h2>
                     <h1 className="flex items-center  text-5xl md:text-5xl font-extrabold uppercase gap-6  ">
                         Darshak
-                        <div className="relative flex items-center w-full max-w-md mt-1">
+                        <div className="relative hidden lg:block items-center w-full max-w-md mt-1">
                             {/* Main line */}
                             <div className="w-full h-[2px] bg-gray-400"></div>
 

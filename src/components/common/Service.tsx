@@ -24,18 +24,19 @@ const Service: React.FC<ServiceProps> = ({
 }) => {
   return (
     <>
-      <section className=" text-white w-full flex justify-between px-6 py-20 border-t-1 border-b-1 border-[#2f3030] ">
-        <div className="w-1/6 text-white text-lg ">
-          {sectionNumber} / {sectionTitle}
-        </div>
-        <div className="space-y-6 w-2/3">
-          <p className="text-xl md:text-1xl lg:text-2xl font-bold indent-40">
-            {description}
-          </p>
-        </div>
-
-        <div className="w-1/6 flex justify-end">
-          {actionText}
+      <section className="w-full text-white px-4 sm:px-6 py-10 sm:py-16 md:py-20 border-t border-b border-[#2f3030]">
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-6 lg:gap-0 w-full">
+          <div className="w-full lg:w-1/6 text-base sm:text-lg mb-2 lg:mb-0 flex-shrink-0">
+            {sectionNumber} / {sectionTitle}
+          </div>
+          <div className="w-full lg:w-2/3 space-y-4 lg:space-y-6">
+            <p className="text-base sm:text-lg lg:text-2xl font-bold lg:indent-40">
+              {description}
+            </p>
+          </div>
+          <div className="w-full lg:w-1/6 flex justify-start lg:justify-end mt-2 lg:mt-0">
+            {actionText}
+          </div>
         </div>
       </section>
 
@@ -58,7 +59,8 @@ const Service: React.FC<ServiceProps> = ({
                     </h2>
                   </div>
 
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out pointer-events-none">
+                  {/* Only show hover image on screens >= 1024px (lg:). On mobile, hide the image completely */}
+                  <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out pointer-events-none">
                     <Image
                       src={item.img}
                       alt={item.title}
@@ -66,7 +68,6 @@ const Service: React.FC<ServiceProps> = ({
                       height={320}
                       className="w-80 h-80 object-cover rounded-xl shadow-lg"
                     />
-
                   </div>
                 </li>
               ))}

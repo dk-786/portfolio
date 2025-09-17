@@ -5,10 +5,12 @@ import HeroIntro from "@/components/HeroIntro";
 import HeroMarque from "@/components/HeroMarque";
 import HeroAbout from "@/components/common/HeroAbout";
 import Service from "@/components/common/Service";
-import { cardData, items, projects, testimonials } from "@/utils/constant/constant";
+import { blogPosts, cardData, items, myPricingPlans, projects, testimonials } from "@/utils/constant/constant";
 import { SectionHeader, MarqueeStrip, ProjectGrid } from "@/components/common/Projects";
 import Clients from "@/components/common/Clients";
 import Customers from "@/components/Customers";
+import PricingPlan from "@/components/common/PricingPlan";
+import NewsBlog from "@/components/common/NewsBlog";
 
 export default function Home() {
   return (
@@ -58,7 +60,21 @@ export default function Home() {
       <Container>
         <Clients testimonials={testimonials} />
       </Container>
+
       <Customers />
+      <PricingPlan plans={myPricingPlans} />
+
+      <div className="py-30 mt-10 rounded-4xl">
+        <Container>
+          <SectionHeader number="08" title="News blog" actionText="((All POsts))" />
+        </Container>
+        <MarqueeStrip text="NEWS" />
+        <Container>
+          <NewsBlog posts={blogPosts}/>
+        </Container>
+
+      </div>
+
     </>
   );
 }
