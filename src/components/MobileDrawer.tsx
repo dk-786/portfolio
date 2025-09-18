@@ -12,9 +12,9 @@ const MobileNavbar = () => {
         <Menu className="h-10 w-10 sm:h-12 sm:w-12 cursor-pointer lg:hidden" />
       </SheetTrigger>
       <SheetContent
-        className="header-noise mt-[100px]  z-40 shadow-none px-14 [&>button]:hidden border-none"
+        className="header-noise mt-[100px]  z-40 shadow-none px-6 [&>button]:hidden border-none"
       >
-        <nav className="flex flex-col gap-6 py-16">
+        <nav className="flex flex-col gap-5 py-16">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href}>
               <span
