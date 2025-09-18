@@ -13,9 +13,9 @@ const Footer = () => {
   return (
     <footer className="text-white mt-30">
       <div className="w-full bg-[#111212]">
-        <div className="extra_container max-w-7xl mx-auto flex flex-col md:flex-row">
+        <div className="extra_container max-w-7xl mx-auto flex flex-col lg:flex-row">
           {/* Left Side */}
-          <div className="w-full md:w-1/2 md:pr-16 py-20 px-6">
+          <div className="w-full lg:w-1/2 lg:pr-16 py-20 px-8">
             <h2 className="text-2xl font-semibold leading-snug mb-10 underline underline-offset-8">
               Feel free to reach out to me. <br />
               <span>I&apos;m always open to discuss new projects</span>
@@ -66,18 +66,24 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-[#171818] mr-4">
-        <div className="extra_container max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center py-[27px] px-6 text-white text-[18px]">
-          <p>© 2025 - All Rights Reserved Nicolas</p>
+      <div className="relative bg-[#171818]">
+        {/* Up Arrow Button - half overlaps top and bottom */}
+        <div className="absolute left-1/2 -top-7 transform -translate-x-1/2 z-10">
           <button
             onClick={scrollToTop}
-            className="bg-[#ffbd4a] text-black px-4 py-5 rounded-md hover:bg-white transition duration-500 cursor-pointer"
+            className="bg-[#ffbd4a] text-black w-12 h-14 flex items-center justify-center rounded-md hover:bg-white transition duration-500 cursor-pointer shadow-lg"
             aria-label="Scroll to top"
             type="button"
+            style={{
+              boxShadow: "0 4px 16px 0 rgba(0,0,0,0.10)",
+            }}
           >
-            <ArrowUp className="w-5 h-5" />
+            <ArrowUp className="w-6 h-6" />
           </button>
-          <p className="mt-3 md:mt-0">
+        </div>
+        <div className="extra_container max-w-6xl mx-auto flex flex-col items-center py-12 px-6 text-white text-[18px]">
+          <p className="mb-2">© 2025 - All Rights Reserved Nicolas</p>
+          <p>
             <Link href="#" className="hover:text-[#ffbd4a] cursor-pointer">
               Terms &amp; Condition
             </Link>

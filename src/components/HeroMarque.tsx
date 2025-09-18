@@ -13,7 +13,7 @@ const StatItem = ({ label, icon }: { label?: string; icon?: boolean }) => {
     );
   }
   return (
-    <span className="text-4xl scale-y-125 font-medium tracking-wide uppercase transition-colors duration-500 hover:text-white text-stroke-black-2">
+    <span className="text-4xl scale-y-100 lg:scale-y-125 font-medium tracking-wide uppercase transition-colors duration-500 hover:text-white text-stroke-black-2">
       {label}
     </span>
   );

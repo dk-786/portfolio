@@ -41,14 +41,14 @@ export default function Home() {
         />
       </Container>
 
-      <div className="py-30 mt-10 rounded-4xl bg-[#111212]">
+      <div className="py-20 lg:py-30 mt-10 rounded-4xl bg-[#111212]">
         <Container>
           <SectionHeader number="04" title="LET ME SHOW YOU" actionText="((PROJECT ALL))" />
         </Container>
         <MarqueeStrip />
         <Container>
           <section className="text-white py-16 border-y border-[#2f3030] mt-15 ">
-            <div className="max-w-6xl mx-auto px-6 space-y-12">
+            <div className="max-w-6xl mx-auto  px-0 lg:px-0 lg:px-6 space-y-12">
               <ProjectGrid projects={projects.slice(0, 2)} withDivider />
               <ProjectGrid projects={projects.slice(2, 4)} withDivider />
               <ProjectGrid projects={projects.slice(4, 6)} />

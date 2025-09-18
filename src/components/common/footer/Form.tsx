@@ -27,7 +27,7 @@ const Form = () => {
   };
 
   return (
-    <div className="w-full md:w-1/2 md:pl-16 py-28 px-6 border-t md:border-t-0 md:border-l border-[#2f3030]">
+    <div className="w-full lg:w-1/2 lg:pl-16 py-28 px-8 border-t lg:border-t-0 lg:border-l border-[#2f3030]">
       <form className="grid gap-9" onSubmit={handleSubmit}>
         <input
           type="text"

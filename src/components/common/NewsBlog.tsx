@@ -18,15 +18,13 @@ interface NewsBlogProps {
 
 const NewsBlog: React.FC<NewsBlogProps> = ({ posts }) => {
   return (
-    <section className="text-white w-full px-4 py-8 sm:px-8 md:px-12 lg:px-20 lg:py-16">
-      {/* Top & Bottom border + divide between items */}
+    <section className="text-white w-full px-0 py-8 lg:px-20 lg:py-16">
       <div className="border-y border-[#2f3030] divide-y divide-[#2f3030]">
         {posts.map((post) => (
           <div
             key={post.id}
             className="flex flex-col lg:grid lg:grid-cols-2 items-center py-8 sm:py-10 lg:py-12 gap-6"
           >
-            {/* Left: Content */}
             <div className="space-y-4 sm:space-y-6 p-0 sm:p-4 lg:p-6 w-full">
               <div className="flex items-center text-base sm:text-lg text-white space-x-2">
                 <span className="text-yellow-400">●</span>
@@ -46,7 +44,6 @@ const NewsBlog: React.FC<NewsBlogProps> = ({ posts }) => {
               </Link>
             </div>
 
-            {/* Right: Image */}
             <div className="relative w-full h-48 sm:h-64 lg:h-64 rounded-lg overflow-hidden cursor-pointer group mt-4 lg:mt-0">
               <Image
                 src={post.image}

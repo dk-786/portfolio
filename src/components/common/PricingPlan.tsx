@@ -44,7 +44,7 @@ const PricingCard: React.FC<{ plan: PricingPlanData }> = ({ plan }) => (
             </ul>
         </div>
         <button
-            className="flex items-center justify-between w-full px-6 lg:px-8 py-4 mt-auto text-[#fff] rounded-lg hover:bg-[#ffbd4a] border-t border-[#2F3030] transition-colors"
+            className="flex items-center justify-between w-full px-8  py-4 mt-auto text-[#fff] rounded-lg hover:bg-[#ffbd4a] border-t border-[#2F3030] transition-colors"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
             Start My Project Now
@@ -61,8 +61,7 @@ const PricingPlan: React.FC<PricingPlanProps> = ({
 }) => {
     return (
         <Container>
-            <section className="text-[#fff] w-full px-4 sm:px-6 pt-12 lg:pt-20 border-t border-[#2F3030] mt-20">
-                {/* Responsive header layout */}
+            <section className="text-[#fff] w-full px-4 sm:px-0 lg:px-6 pt-12 lg:pt-20 border-t border-[#2F3030] mt-20">
                 <div className="w-full flex flex-col lg:flex-row lg:justify-between gap-6 lg:gap-0 mb-8">
                     <div className="w-full lg:w-1/6 text-base lg:text-lg uppercase flex-shrink-0 mb-2 lg:mb-0">
                         {sectionNumber} {"//"} {sectionTitle}
@@ -76,7 +75,6 @@ const PricingPlan: React.FC<PricingPlanProps> = ({
                         {actionText}
                     </div>
                 </div>
-                {/* Responsive grid: 1 col on mobile, 2 on md, 3 on lg+ */}
                 <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6 lg:pt-12">
                     {myPricingPlans.map((plan) => (
                         <PricingCard key={plan.id} plan={plan} />

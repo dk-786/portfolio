@@ -9,7 +9,7 @@ const MobileNavbar = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Menu className="h-12 w-12 cursor-pointer lg:hidden" />
+        <Menu className="h-10 w-10 sm:h-12 sm:w-12 cursor-pointer lg:hidden" />
       </SheetTrigger>
       <SheetContent
         className="header-noise mt-[100px]  z-40 shadow-none px-14 [&>button]:hidden border-none"

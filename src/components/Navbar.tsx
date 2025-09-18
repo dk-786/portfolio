@@ -28,10 +28,11 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full flex items-center justify-between border-b border-[#343434] bg-[#171818] text-white shadow-md header-noise transition-all duration-300 z-50 ${scrolled
-          ? "px-[75px] py-[30px] rounded-none scrolled"
-          : "px-[75px] py-[30px] rounded-none  lg:px-[75px] lg:py-[40px] lg:rounded-b-[40px]"
-        }`}
+      className={`fixed top-0 left-0 w-full flex items-center justify-between border-b border-[#343434] bg-[#171818] text-white shadow-md header-noise transition-all duration-300 z-50 ${
+        scrolled
+          ? "px-8 py-7 rounded-none scrolled lg:px-[75px] lg:py-[30px]"
+          : "px-8 py-7 rounded-none lg:px-[75px] lg:py-[40px] lg:rounded-b-[40px]"
+      }`}
     >
       <div className="relative z-10  flex w-full  items-center justify-between">
         <Link
@@ -43,9 +44,10 @@ const Navbar = () => {
             src="/user/logo.png"
             alt="Logo"
             width={157}
-            height={90}
+            height={60}
             priority
             unoptimized
+            className="w-[124px] h-[48px] lg:w-[157px] lg:h-[60px]"
           />
         </Link>
         <NavigationMenu className="hidden lg:flex lg:flex-1">

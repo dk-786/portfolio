@@ -100,27 +100,24 @@ const CenterImage = memo(function CenterImage() {
 
 function HeroInfo() {
   return (
-    <section className="relative w-full nicolas_sm_hero text-white py-10 sm:py-16 md:py-20 min-h-[600px] md:min-h-[724px] px-2 sm:px-4 md:px-8">
-      <div className="absolute -top-10 left-2 sm:left-4 text-base sm:text-lg md:text-xl flex gap-2 items-center z-20">
+    <section className="relative w-full nicolas_sm_hero text-white py-10 min-h-[600px] px-8">
+      <div className="absolute -top-10 left-2 text-base flex gap-2 items-center z-20">
         <span className="text-white mb-2">01 // 09 - scroll</span>
-        <FaArrowDownLong className="animate-bounce w-5 h-5 sm:w-6 sm:h-6" />
+        <FaArrowDownLong className="animate-bounce w-5 h-5" />
       </div>
 
-      <div className="overlay_bg absolute inset-0 rounded-[20px] md:rounded-[40px]" />
+      <div className="overlay_bg absolute inset-0 rounded-[20px] lg:rounded-[40px]" />
 
-      <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 z-10 h-full w-full">
-        {/* Left column */}
+      <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 z-10 h-full w-full">
         <div className="flex flex-col justify-between w-full max-w-full lg:w-60 pr-0 lg:pr-8 gap-8 lg:gap-0">
           <AboutMe />
           <WhatIDo />
         </div>
 
-        {/* Center image */}
         <div className="my-6 lg:my-0 flex items-center justify-center">
           <CenterImage />
         </div>
 
-        {/* Right column */}
         <div className="flex flex-col justify-between h-full text-left lg:text-right pl-0 lg:pl-8 gap-8 lg:gap-0">
           <ContactMe />
           <FindWithMe />
@@ -146,7 +143,7 @@ function HeroInfo() {
           border-radius: 20px;
           z-index: 1;
         }
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
           .overlay_bg::before,
           .overlay_bg::after {
             border-radius: 40px;

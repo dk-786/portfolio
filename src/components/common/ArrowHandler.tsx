@@ -4,11 +4,33 @@ import React, { useEffect, useState } from "react";
 export default function ArrowHandler() {
   const [dotPos, setDotPos] = useState({ x: -100, y: -100, visible: false });
   const [circlePos, setCirclePos] = useState({ x: -100, y: -100 });
-  const [isPointerTarget, setIsPointerTarget] = useState(false); 
+  const [isPointerTarget, setIsPointerTarget] = useState(false);
+  const [showCursor, setShowCursor] = useState(false);
+
+  // Detect viewport width and set showCursor accordingly
   useEffect(() => {
+    const checkWidth = () => {
+      if (typeof window !== "undefined") {
+        setShowCursor(window.innerWidth >= 1024);
+      }
+    };
+    checkWidth();
+    window.addEventListener("resize", checkWidth);
+    return () => window.removeEventListener("resize", checkWidth);
+  }, []);
+
+  useEffect(() => {
+    if (!showCursor) return;
+
     const onMove = (e: PointerEvent | TouchEvent) => {
-      const x = 'clientX' in e ? e.clientX : (e.touches && e.touches[0].clientX) ?? 0;
-      const y = 'clientY' in e ? e.clientY : (e.touches && e.touches[0].clientY) ?? 0;
+      const x =
+        "clientX" in e
+          ? e.clientX
+          : (e.touches && e.touches[0].clientX) ?? 0;
+      const y =
+        "clientY" in e
+          ? e.clientY
+          : (e.touches && e.touches[0].clientY) ?? 0;
 
       let el: HTMLElement | null = e.target as HTMLElement;
       let pointerTarget = false;
@@ -40,9 +62,10 @@ export default function ArrowHandler() {
       window.removeEventListener("pointerleave", onLeave);
       window.removeEventListener("blur", onLeave);
     };
-  }, []);
+  }, [showCursor]);
 
   useEffect(() => {
+    if (!showCursor) return;
     const animateCircle = () => {
       setCirclePos((prev) => {
         const dx = dotPos.x - prev.x;
@@ -59,7 +82,9 @@ export default function ArrowHandler() {
       const interval = setInterval(animateCircle, 7);
       return () => clearInterval(interval);
     }
-  }, [dotPos, isPointerTarget]);
+  }, [dotPos, isPointerTarget, showCursor]);
+
+  if (!showCursor) return null;
 
   return (
     <div className="fixed inset-0 pointer-events-none z-50">

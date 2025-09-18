@@ -30,13 +30,11 @@ const HeroAbout: React.FC<HeroAboutProps> = ({
 
   return (
     <section className="flex flex-col items-center justify-center w-full">
-      <div className="text-white w-full flex flex-col lg:flex-row justify-between px-4 sm:px-6 py-10 lg:py-20 border-t border-[#2f3030] mt-16 lg:mt-28 gap-8 lg:gap-0">
-        {/* Section Number & Title */}
+      <div className="text-white w-full flex flex-col lg:flex-row justify-between px-4 sm:px-0 lg:px-6 py-10 lg:py-20 border-t border-[#2f3030] mt-16 lg:mt-28 gap-8 lg:gap-0">
         <div className="w-full lg:w-1/6 text-white text-base sm:text-lg mb-4 lg:mb-0 flex-shrink-0 flex items-center lg:items-start">
           {sectionNumber} {"//"} {sectionTitle}
         </div>
 
-        {/* Main Description */}
         <div className="w-full lg:w-2/3 space-y-4 lg:space-y-6 flex items-center">
           <p className="text-base sm:text-lg lg:text-2xl font-bold lg:indent-60">
             Hello, my name&apos;s{" "}
@@ -47,7 +45,6 @@ const HeroAbout: React.FC<HeroAboutProps> = ({
           </p>
         </div>
 
-        {/* Scroll Down Icon */}
         <div className="w-full lg:w-1/6 flex items-center lg:items-end justify-center lg:justify-end mt-6 lg:mt-0">
           <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 flex items-end">
             <Image
