@@ -58,7 +58,6 @@ const PricingPlan: React.FC<PricingPlanProps> = ({
     sectionTitle = "Pricing plan",
     description = "Your pricing page is a prime opportunity to take control of the price conversation and make it even easier for people to buy.",
     actionText = "(( Service All ))",
-    plans,
 }) => {
     return (
         <Container>

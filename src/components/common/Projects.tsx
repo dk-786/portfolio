@@ -15,7 +15,7 @@ interface SectionHeaderProps {
 export const SectionHeader: React.FC<SectionHeaderProps> = ({ number, title, actionText }) => (
   <section className="text-white w-full flex flex-col lg:flex-row justify-between px-6 pt-20 border-t border-[#2F3030]">
     <div className="w-full lg:w-1/6 text-lg uppercase mb-2 lg:mb-0">
-      {number} / {title}
+      {number} {"//"} {title}
     </div>
     <div className="w-full lg:w-1/6 flex justify-end uppercase">
       {actionText}
@@ -45,7 +45,7 @@ export const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
     <div className="flex justify-between items-start px-5 py-6 relative">
         <div>
           <p className="text-md font-semibold uppercase tracking-wide text-[#ffbd4a] hover:text-white transition duration-350">
-            // {project.category}
+            {"//"} {project.category}
           </p>
           <h3 className="text-2xl font-semibold text-white mt-2 hover:text-[#ffbd4a]  transition duration-350">
             {project.title}

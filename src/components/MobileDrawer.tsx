@@ -1,12 +1,10 @@
 "use client";
 import Link from "next/link";
 import { Menu } from "lucide-react";
-import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { navItems } from "@/utils/constant/constant";
 
 const MobileNavbar = () => {
-  const pathname = usePathname();
 
   return (
     <Sheet>

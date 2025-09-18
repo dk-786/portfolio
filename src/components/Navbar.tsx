@@ -28,11 +28,10 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full flex items-center justify-between border-b border-[#343434] bg-[#171818] text-white shadow-md header-noise transition-all duration-300 z-50 ${
-        scrolled
+      className={`fixed top-0 left-0 w-full flex items-center justify-between border-b border-[#343434] bg-[#171818] text-white shadow-md header-noise transition-all duration-300 z-50 ${scrolled
           ? "px-[75px] py-[30px] rounded-none scrolled"
           : "px-[75px] py-[30px] rounded-none  lg:px-[75px] lg:py-[40px] lg:rounded-b-[40px]"
-      }`}
+        }`}
     >
       <div className="relative z-10  flex w-full  items-center justify-between">
         <Link
@@ -55,11 +54,10 @@ const Navbar = () => {
               <NavigationMenuItem key={item.href}>
                 <Link
                   href={item.href}
-                  className={`font-medium transition-colors ${
-                    pathname === item.href
+                  className={`font-medium transition-colors ${pathname === item.href
                       ? "text-primary"
                       : "text-muted-foreground"
-                  }`}
+                    }`}
                 >
                   <NavigationMenuLink asChild>
                     <span>{item.label}</span>
@@ -72,10 +70,10 @@ const Navbar = () => {
 
         <div className="relative lg:border-l border-[#343434] h-full pl-9 flex items-center justify-end">
           <div className="lg:hidden">
-            <MobileNavbar/>
+            <MobileNavbar />
           </div>
           <Button className="hidden lg:flex bg-[#ffbd4a] text-black text-lg font-bold px-11 py-7 rounded-md hover:bg-white transition duration-500 items-center gap-2 cursor-pointer">
-            Let's talk
+            Let&apos;s talk
             <Image
               src="/user/arrow.png"
               alt="Arrow"
