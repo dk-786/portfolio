@@ -229,3 +229,25 @@ export const blogPosts = [
   },
 ];
 
+export const skills = [
+  {
+    name: "UI / UX Design",
+    percentage: 95,
+    icon: "/user/14.png",
+  },
+  {
+    name: "Development",
+    percentage: 90,
+    icon: "/user/15.png",
+  },
+  {
+    name: "Graphic Design",
+    percentage: 80,
+    icon: "/user/16.png",
+  },
+  {
+    name: "WordPress",
+    percentage: 95,
+    icon: "/user/17.png",
+  },
+];

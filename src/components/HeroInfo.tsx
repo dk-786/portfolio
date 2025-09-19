@@ -14,7 +14,7 @@ const InfoSection = memo(function InfoSection({
   children: React.ReactNode;
   align?: "left" | "right";
 }) {
-  // Responsive alignment for mobile: always left, right only on lg+
+
   const alignClass =
     align === "right"
       ? "lg:ml-auto ml-0"
@@ -100,7 +100,7 @@ const CenterImage = memo(function CenterImage() {
 
 function HeroInfo() {
   return (
-    <section className="relative w-full nicolas_sm_hero text-white py-10 min-h-[600px] px-8">
+    <section className="relative w-full nicolas_sm_hero text-white py-10 min-h-[600px] px-8  mb-20 lg:mb-30">
       <div className="absolute -top-10 left-2 text-base flex gap-2 items-center z-20">
         <span className="text-white mb-2">01 // 09 - scroll</span>
         <FaArrowDownLong className="animate-bounce w-5 h-5" />

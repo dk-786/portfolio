@@ -168,6 +168,7 @@
 
 
 
+
 /* Marquee Animation */
 @keyframes marquee {
   0% {
@@ -188,4 +189,25 @@
   opacity: 1 !important;
   cursor: pointer !important;
   pointer-events: auto !important;
+}
+
+
+.text-stroke {
+  -webkit-text-stroke: 1px white;
+  text-stroke: 1px white;
+}
+
+/* A fallback for browsers that don't support text-stroke */
+@supports not (-webkit-text-stroke: 1px white) {
+  .text-stroke {
+      color: transparent;
+      background: linear-gradient(to right, white 0%, white 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow:
+          -1px -1px 0 #fff,  
+          1px -1px 0 #fff,
+          -1px 1px 0 #fff,
+          1px 1px 0 #fff;
+  }
 }

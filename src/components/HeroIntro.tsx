@@ -4,7 +4,7 @@ import React from "react";
 
 export default function HeroIntro() {
     return (
-        <section className="relative w-full bg-[#171818] text-white py-44  ">
+        <section className="relative w-full bg-[#171818] text-white pb-44  ">
             <div className="flex flex-col lg:flex-row items-center justify-between ">
                 <div className="flex flex-col text-left w-full gap-2 scale-y-100 lg:scale-y-125 ">
                     <h2 className="text-5xl font-extrabold uppercase tracking-wide text-transparent stroke-text ">

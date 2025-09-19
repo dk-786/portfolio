@@ -26,9 +26,9 @@ export default function RootLayout({
     <html lang="en" className={montserrat.variable}>
       <body className="font-sans">
         <Navbar />
-        {children}
+        <div className="pt-44">{children}</div>
         <Footer />
-        <ArrowHandler /> 
+        <ArrowHandler />
       </body>
     </html>
   )
