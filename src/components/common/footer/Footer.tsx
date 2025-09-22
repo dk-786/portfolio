@@ -14,8 +14,7 @@ const Footer = () => {
     <footer className="text-white mt-30">
       <div className="w-full bg-[#111212]">
         <div className="extra_container max-w-7xl mx-auto flex flex-col lg:flex-row">
-          {/* Left Side */}
-          <div className="w-full lg:w-1/2 lg:pr-16 py-20 px-8">
+                    <div className="w-full lg:w-1/2 lg:pr-16 py-20 px-8">
             <h2 className="text-2xl font-semibold leading-snug mb-10 underline underline-offset-8">
               Feel free to reach out to me. <br />
               <span>I&apos;m always open to discuss new projects</span>
@@ -67,8 +66,7 @@ const Footer = () => {
       </div>
 
       <div className="relative bg-[#171818]">
-        {/* Up Arrow Button - half overlaps top and bottom */}
-        <div className="absolute left-1/2 -top-7 transform -translate-x-1/2 z-10">
+                <div className="absolute left-1/2 -top-7 transform -translate-x-1/2 z-10">
           <button
             onClick={scrollToTop}
             className="bg-[#ffbd4a] text-black w-12 h-14 flex items-center justify-center rounded-md hover:bg-white transition duration-500 cursor-pointer shadow-lg"

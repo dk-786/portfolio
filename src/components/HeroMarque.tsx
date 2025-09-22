@@ -23,7 +23,7 @@ const StatsMarquee = React.memo(() => {
   const marqueeItems = [...stats, ...stats];
 
   return (
-    <div className="w-full bg-[#171818] py-36">
+    <div className="w-full bg-[#171818] py-26">
       <div className="bg-[#f5f3ee] text-black">
         <Marquee gradient={false} speed={50} direction="left" pauseOnHover={false}>
           <div className="flex items-center gap-16 px-8 h-36">

@@ -27,7 +27,7 @@ interface MarqueeStripProps {
     ];
   
     return (
-      <div className="w-full flex items-center justify-center pt-10">
+      <div className="w-full flex items-center justify-center ">
         <Marquee gradient={false} speed={70} direction="left">
           <div
             className="

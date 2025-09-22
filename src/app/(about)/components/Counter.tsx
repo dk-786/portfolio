@@ -21,7 +21,7 @@ const Counter = () => {
   return (
     <Container>
       <div className="flex items-center justify-center text-white px-4">
-        <div className="flex">
+        <div className="flex flex-col gap-8 w-full items-center justify-center lg:flex-row lg:gap-0">
           {skills.map((skill, index) => (
             <SkillCircle
               key={index}
@@ -79,21 +79,23 @@ const SkillCircle: React.FC<SkillCircleProps> = ({ skill, index, total }) => {
   return (
     <div
       ref={ref}
-      className="flex items-center justify-center rounded-full border border-[#2f3030]"
+      className={`
+        flex items-center justify-center rounded-full border border-[#2f3030]
+        w-full max-w-[350px] aspect-square
+        lg:w-[300px] lg:h-[300px] lg:aspect-auto
+        ${index !== 0 ? "lg:ml-[-30px]" : ""}
+        `}
       style={{
-        width: "300px",
-        height: "300px",
-        marginLeft: index !== 0 ? "-30px" : "0",
         zIndex: total - index,
       }}
     >
       <div
-        className="flex flex-col items-center justify-center rounded-full gap-4 
-                   hover:bg-[#111212] transition-all duration-300"
-        style={{
-          width: "240px",
-          height: "240px",
-        }}
+        className={`
+          flex flex-col items-center justify-center rounded-full gap-4
+          hover:bg-[#111212] transition-all duration-300
+          w-[80vw] h-[80vw] max-w-[280px] max-h-[280px]
+          lg:w-[240px] lg:h-[240px]
+        `}
       >
         <div className="mb-2 flex justify-center items-center">
           <img src={skill.icon} alt={skill.name} className="w-12 h-12" />

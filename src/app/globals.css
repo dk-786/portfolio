@@ -137,6 +137,7 @@
   /* adjust intensity */
   z-index: 1;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 /* ✅ Only large screens (lg: ≥1024px) get rounded bottom */

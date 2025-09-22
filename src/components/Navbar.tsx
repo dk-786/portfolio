@@ -54,17 +54,15 @@ const Navbar = () => {
           <NavigationMenuList className="flex gap-5">
             {navItems.map((item) => (
               <NavigationMenuItem key={item.href}>
-                <Link
-                  href={item.href}
-                  className={`font-medium transition-colors ${pathname === item.href
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                    }`}
-                >
-                  <NavigationMenuLink asChild>
-                    <span>{item.label}</span>
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href={item.href}
+                    data-active={pathname === item.href}
+                    className="font-medium transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>

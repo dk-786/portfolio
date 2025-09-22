@@ -2,17 +2,11 @@ import Image from "next/image";
 import React from "react";
 import { SectionHeader } from "./SectionHeader";
 import { items } from "@/utils/constant/constant";
+import Container from "./Container";
 
 const Service = () => {
   return (
-    <>
-      <SectionHeader
-        number="03"
-        title="My services"
-        actionText="((Service All))"
-        description="Our work builds more loyal audiences by combining an unwavering focus on their needs and desires, and our relentless pursuit of design excellence."
-      />
-
+    <Container>
       {items.length > 0 && (
         <section className="w-full text-white py-2 lg:py-16">
           <div className="max-w-5xl mx-auto  relative">
@@ -46,7 +40,7 @@ const Service = () => {
           </div>
         </section>
       )}
-    </>
+    </Container>
   );
 };
 

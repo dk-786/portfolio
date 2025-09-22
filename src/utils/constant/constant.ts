@@ -251,3 +251,85 @@ export const skills = [
     icon: "/user/17.png",
   },
 ];
+export const experiences= [
+  {
+    company: "Designflow Studio",
+    role: "Design, motion, 3D, art direction",
+    period: "2023 - Present",
+  },
+  {
+    company: "Moment Factory",
+    role: "Senior UI/UX Designer",
+    period: "2019 - 2022",
+  },
+  {
+    company: "Brunodoe Agency",
+    role: "Framer Designer & Developer",
+    period: "2017 - 2018",
+  },
+  {
+    company: "Envato Market",
+    role: "Front-End WordPress Developer",
+    period: "2016 - 2017",
+  },
+  {
+    company: "Designflow Studio",
+    role: "Webflow Developer & Co-Founder",
+    period: "2015 - 2016",
+  },
+];
+export const awards = [
+  { title: "Webby Awards", award: "Awwwards", link: "#" },
+  { title: "CSS Design Awards", award: "Site of the Day", link: "#" },
+  { title: "Golden Pixel Awards", award: "Awwwards", link: "#" },
+  { title: "Developer Award", award: "TechnoWorld", link: "#" },
+  { title: "Motion Graphics", award: "TechnoWorld", link: "#" },
+];
+
+
+export const titleLines = [
+  [
+    { text: "Specialized", className: "underline" },
+    { text: "in website", className: "text-transparent text-stroke" },
+    { text: "and", className: "underline" },
+    { text: "design", className: "text-transparent text-stroke" },
+  ],
+  [
+    { text: "system", className: "underline" },
+  ],
+];
+
+export const cardDataOne = [
+  {
+    number: "01",
+    title: "Send up your project",
+    description:
+      "Duis aute irure dolor in voluptate exceptur sint occaecat cupidatat non proident, sunt in officia deserunt mollit anim id est.",
+  },
+  {
+    number: "02",
+    title: "Get it delivered on time",
+    description:
+      "Duis aute irure dolor in voluptate exceptur sint occaecat cupidatat non proident, sunt in officia deserunt mollit anim id est.",
+  },
+  {
+    number: "03",
+    title: "Take on more clients & scale up",
+    description:
+      "Duis aute irure dolor in voluptate exceptur sint occaecat cupidatat non proident, sunt in officia deserunt mollit anim id est.",
+  },
+];
+
+export const projectDesignData = [
+  [
+    { text: "We design", className: "text-transparent text-stroke" },
+    { text: "brands", className: "underline" },
+    { text: "&", className: "text-transparent text-stroke" },
+    { text: "websites", className: "underline" },
+    { text: "plus", className: "text-transparent text-stroke" },
+  ],
+  [
+    { text: "exceptional software", className: "text-transparent text-stroke" },
+    { text: "platforms", className: "underline" },
+  ],
+];

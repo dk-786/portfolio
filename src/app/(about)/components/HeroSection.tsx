@@ -17,7 +17,6 @@ export default function HeroSection({ videoUrl, playIcon }: HeroSectionProps) {
   return (
     <Container>
       <section className="bg-[#171818] text-white flex flex-col items-center justify-center py-12 ">
-        {/* Heading */}
         <div className="flex flex-col items-center justify-center w-full text-center scale-y-100 lg:scale-y-135">
           <div className="flex flex-wrap items-center justify-center gap-x-4">
             <h2 className="text-5xl font-bold uppercase text-transparent text-stroke">
@@ -39,7 +38,6 @@ export default function HeroSection({ videoUrl, playIcon }: HeroSectionProps) {
           </div>
         </div>
 
-        {/* Image + Play Button */}
         <div className="relative">
           <div className="mt-42 w-full rounded-4xl overflow-hidden">
             <Image
@@ -51,22 +49,20 @@ export default function HeroSection({ videoUrl, playIcon }: HeroSectionProps) {
             />
           </div>
 
-          {/* Play Button triggers modal */}
           {videoUrl && (
             <button
               onClick={() => setIsOpen(true)}
-              className="absolute z-10 h-38 w-38 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2
-              bg-[#ffbd4a] border-[18px] border-[#171818] hover:border-[#ffbd4a] hover:bg-white
+              className="absolute z-10 lg:h-38 lg:w-38 h-30 w-30 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2
+              bg-[#ffbd4a] lg:border-[18px] border-[12px] border-[#171818] hover:border-[#ffbd4a] hover:bg-white
               rounded-full flex items-center justify-center cursor-pointer transition-colors group"
             >
               {playIcon || (
-                <FaPlay className="w-8 h-8 text-[#171818] group-hover:text-[#ffbd4a] transition-colors"/>
+                <FaPlay className="lg:w-8 lg:h-8 h-5 w-5 text-[#171818] group-hover:text-[#ffbd4a] transition-colors" />
               )}
             </button>
           )}
         </div>
 
-        {/* Modal */}
         {isOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
             <button
@@ -78,7 +74,11 @@ export default function HeroSection({ videoUrl, playIcon }: HeroSectionProps) {
             <div className="relative w-[90%] max-w-3xl bg-black rounded-2xl overflow-hidden shadow-lg">
               <div className="w-full aspect-video">
                 <iframe
-                  src={videoUrl ? videoUrl.replace("watch?v=", "embed/")+ "?autoplay=1" : ""}
+                  src={
+                    videoUrl
+                      ? videoUrl.replace("watch?v=", "embed/") + "?autoplay=1"
+                      : ""
+                  }
                   title="YouTube video"
                   className="w-full h-full"
                   frameBorder="0"
