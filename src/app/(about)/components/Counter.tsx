@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
+import Image from "next/image";
 import { skills } from "@/utils/constant/constant";
 import Container from "@/components/common/Container";
 
@@ -41,25 +42,7 @@ const SkillCircle: React.FC<SkillCircleProps> = ({ skill, index, total }) => {
   const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting && !hasAnimated) {
-          animateCounter();
-          setHasAnimated(true);
-        }
-      },
-      { threshold: 0.4 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => {
-      if (ref.current) observer.unobserve(ref.current);
-    };
-  }, [hasAnimated]);
-
-  const animateCounter = () => {
+  const animateCounter = useCallback(() => {
     let start = 0;
     const end = skill.percentage;
     const duration = 1500; // 1.5s
@@ -74,7 +57,26 @@ const SkillCircle: React.FC<SkillCircleProps> = ({ skill, index, total }) => {
         setCount(Math.floor(start));
       }
     }, 30);
-  };
+  }, [skill.percentage]);
+
+  useEffect(() => {
+    const node = ref.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting && !hasAnimated) {
+          animateCounter();
+          setHasAnimated(true);
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    if (node) observer.observe(node);
+    return () => {
+      if (node) observer.unobserve(node); 
+    };
+  }, [hasAnimated, skill.percentage, animateCounter]);
 
   return (
     <div
@@ -98,7 +100,7 @@ const SkillCircle: React.FC<SkillCircleProps> = ({ skill, index, total }) => {
         `}
       >
         <div className="mb-2 flex justify-center items-center">
-          <img src={skill.icon} alt={skill.name} className="w-12 h-12" />
+          <Image src={skill.icon} alt={skill.name} width={48} height={48} />
         </div>
         <div>
           <div className="text-xl font-medium text-center">{skill.name}</div>

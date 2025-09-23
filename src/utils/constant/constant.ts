@@ -227,6 +227,20 @@ export const blogPosts = [
     image: "/user/12.jpg",
     link: "/blog/running-adventures",
   },
+  {
+    id: 4,
+    date: "January 26, 2024",
+    title: "A beginner’s guide to running adventures",
+    image: "/user/20.jpg",
+    link: "/blog/running-adventures",
+  },
+  {
+    id: 5,
+    date: "January 26, 2024",
+    title: "A beginner’s guide to running adventures",
+    image: "/user/21.jpg",
+    link: "/blog/running-adventures",
+  },
 ];
 
 export const skills = [
@@ -333,3 +347,56 @@ export const projectDesignData = [
     { text: "platforms", className: "underline" },
   ],
 ];
+
+export const images = [
+  "/user/sliderone.jpg",
+  "/user/slidertwo.jpg",
+  "/user/sliderthree.jpg",
+  "/user/sliderfour.jpg",
+  "/user/1.jpg",
+  "/user/2.jpg",
+  "/user/3.jpg",
+  "/user/4.jpg",
+  "/user/5.jpg",
+  "/user/6.jpg",
+];
+
+export const titleLiness = [
+  [
+    { text: "User", className: "text-transparent text-stroke" },
+    { text: "interface", className: "underline" },
+  ],
+  [
+    { text: "design", className: "underline" },
+    { text: "growth tips and", className: "text-transparent text-stroke" },
+    { text: "trends", className: "underline" },
+  ],
+];
+
+  export const blogs = [
+    {
+      id: 1,
+      date: "January 05, 2024",
+      title: "How to develop website",
+      description:
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      image: "/user/10.jpg",
+    },
+    {
+      id: 2,
+      date: "February 10, 2024",
+      title: "Best UI/UX practices",
+      description:
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.",
+      image: "/user/22.jpg",
+    },
+    {
+      id: 3,
+      date: "February 10, 2024",
+      title: "Best UI/UX practices",
+      description:
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.",
+      image: "/user/23.jpg",
+    },
+  ];
+

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { SectionHeader } from "./SectionHeader";
 import { items } from "@/utils/constant/constant";
 import Container from "./Container";
 
