@@ -52,19 +52,31 @@ const Navbar = () => {
         </Link>
         <NavigationMenu className="hidden lg:flex lg:flex-1">
           <NavigationMenuList className="flex gap-5">
-            {navItems.map((item) => (
-              <NavigationMenuItem key={item.href}>
-                <NavigationMenuLink asChild>
+            {navItems.map((item) => {
+              const isServiceLink = item.href === "/service";
+              const isServiceActive = isServiceLink && (
+                pathname === "/service" ||
+                pathname === "/service_single" ||
+                pathname.startsWith("/service/")
+              );
+              const isActive = isServiceLink
+                ? isServiceActive
+                : pathname === item.href || pathname.startsWith(`${item.href}/`);
+
+              return (
+                <NavigationMenuItem key={item.href}>
+                  <NavigationMenuLink asChild>
                   <Link
                     href={item.href}
-                    data-active={pathname === item.href}
+                    data-active={isActive}
                     className="font-medium transition-colors"
                   >
-                    {item.label}
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            ))}
+                      {item.label}
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              );
+            })}
           </NavigationMenuList>
         </NavigationMenu>
 

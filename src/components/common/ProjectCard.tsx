@@ -1,8 +1,9 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { TfiArrowTopRight } from "react-icons/tfi";
 import { projects } from "@/utils/constant/constant";
-
+import { useRouter } from "next/navigation";
 
 
 interface ProjectGridProps {
@@ -17,6 +18,7 @@ export const ProjectGrid: React.FC<ProjectGridProps> = ({
   withDivider,
 }) => {
   const displayProjects = projects.slice(startIndex, endIndex);
+  const router = useRouter();
   
   return (
     <>
@@ -37,7 +39,8 @@ export const ProjectGrid: React.FC<ProjectGridProps> = ({
                 <p className="text-md font-semibold uppercase tracking-wide text-[#ffbd4a] hover:text-white transition duration-350">
                   {"//"} {project.category}
                 </p>
-                <h3 className="text-2xl font-semibold text-white mt-2 hover:text-[#ffbd4a]  transition duration-350">
+                <h3 className="text-2xl font-semibold text-white mt-2 hover:text-[#ffbd4a]  transition duration-350"
+                onClick={() => router.push("/portfolio_single")}>
                   {project.title}
                 </h3>
               </div>

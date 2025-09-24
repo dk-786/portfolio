@@ -400,3 +400,31 @@ export const titleLiness = [
     },
   ];
 
+  export const faqData = [
+    {
+      question: 'Why should I choose Nicolas?',
+      answer:
+        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised open ininiwords which don\'t look even again is there anyone who loves slightly believable.',
+    },
+    {
+      question: 'Unique brand identity and strategy',
+      answer:
+        'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English.',
+    },
+    {
+      question: 'Tailor-made digital products',
+      answer:
+        'The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.',
+    },
+    {
+      question: 'Are you open for new projects?',
+      answer:
+        'Yes! We are always excited to take on new and challenging projects. Please feel free to reach out to discuss your ideas.',
+    },
+    {
+      question: 'Do you currently have career openings?',
+      answer:
+        'We do! We are a rapidly growing company and are always looking for talented individuals to join our team. Check our careers page for the latest listings.',
+    },
+  ];
+

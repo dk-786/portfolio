@@ -1,9 +1,12 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import { items } from "@/utils/constant/constant";
 import Container from "./Container";
+import { useRouter } from "next/navigation";
 
 const Service = () => {
+  const router = useRouter();
   return (
     <Container>
       {items.length > 0 && (
@@ -14,7 +17,7 @@ const Service = () => {
                 <li
                   key={index}
                   className="relative flex items-center justify-between border-b border-white group cursor-pointer py-12 pb-0"
-                >
+                  onClick={() => router.push("/service_single")} >
                   <div className="flex items-center flex-1 w-full">
                     <span className="w-12 min-w-[3rem] text-lg font-medium tracking-widest text-gray-400 flex-shrink-0">
                       {item.num}
@@ -24,7 +27,7 @@ const Service = () => {
                     </h2>
                   </div>
 
-                  <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out pointer-events-none">
+                  <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-normal ease-out- pointer-events-none z-10">
                     <Image
                       src={item.img}
                       alt={item.title}

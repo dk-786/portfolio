@@ -45,7 +45,7 @@ const SkillCircle: React.FC<SkillCircleProps> = ({ skill, index, total }) => {
   const animateCounter = useCallback(() => {
     let start = 0;
     const end = skill.percentage;
-    const duration = 1500; // 1.5s
+    const duration = 1500; 
     const increment = end / (duration / 30);
 
     const timer = setInterval(() => {
