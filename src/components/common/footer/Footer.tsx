@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
 
       <div className="relative bg-[#171818]">
-                <div className="absolute left-1/2 -top-7 transform -translate-x-1/2 z-10">
+        <div className="absolute left-1/2 -top-7 transform -translate-x-1/2 z-10">
           <button
             onClick={scrollToTop}
             className="bg-[#ffbd4a] text-black w-12 h-14 flex items-center justify-center rounded-md hover:bg-white transition duration-500 cursor-pointer shadow-lg"

@@ -32,7 +32,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   
 }) => {
   const scrollToTop = useCallback(() => {
-    if (scrollTarget !== undefined) {
+    if (scrollTarget !== undefined && typeof window !== "undefined") {
       window.scrollTo({ top: scrollTarget, behavior: "smooth" });
     }
   }, [scrollTarget]);

@@ -6,13 +6,11 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
-import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
 
 const ProjectDetails = () => {
   return (
     <section className=" text-white py-12 ">
       <div className="space-y-10">
-        {/* Top Info Bar */}
         <div className=" rounded-lg  flex w-full justify-between  text-md">
           <div>
             <h4 className="text-gray-400 font-medium">Client:</h4>
@@ -49,7 +47,6 @@ const ProjectDetails = () => {
           </div>
         </div>
 
-        {/* Title & Main Content */}
         <div className="space-y-6">
           <h2 className="text-2xl lg:text-4xl font-bold leading-snug">
             How To Improve And Measure Your Progress Learning Mobile Application
@@ -67,7 +64,6 @@ const ProjectDetails = () => {
             structures, to generate Lorem Ipsum which looks reasonable.
           </p>
 
-          {/* Bullet Points */}
           <ul className="mt-8 space-y-3 text-left text-[#959595]">
             <li className="flex items-start gap-3">
               <span className="w-2 h-2 mt-2 bg-[#ffbd4a] rounded-full"></span>
@@ -101,7 +97,6 @@ const ProjectDetails = () => {
           </p>
         </div>
 
-        {/* Sub Heading */}
         <div>
           <h3 className="text-xl lg:text-3xl font-semibold mb-4">
             Find out the design solution.
@@ -117,7 +112,6 @@ const ProjectDetails = () => {
           </p>
         </div>
 
-        {/* Images Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           <div className="bg-[#1a1a1a] rounded-4xl overflow-hidden">
             <Image
@@ -148,16 +142,28 @@ const ProjectDetails = () => {
           </div>
         </div>
         <div className="bg-black rounded-2xl flex items-center justify-between px-8 py-6">
-          {/* Previous Button */}
-          <button className="flex items-center space-x-2 text-white font-semibold hover:text-[#ffbd4a] transition">
-            <HiOutlineChevronLeft className="text-sm" />
+
+          <button className="flex items-center text-lg space-x-2 text-white font-semibold hover:text-[#ffbd4a] transition">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-5 h-5 fill-current"
+            >
+              <path d="M15 19l-7-7 7-7" />
+            </svg>
             <span>Previous</span>
           </button>
 
-          {/* Next Button */}
-          <button className="flex items-center space-x-2 text-white font-semibold hover:text-[#ffbd4a] transition">
+          
+          <button className="flex items-center text-lg space-x-2 text-white font-semibold hover:text-[#ffbd4a] transition">
             <span>Next</span>
-            <HiOutlineChevronRight className="text-sm" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-5 h-5 fill-current rotate-180"
+            >
+              <path d="M15 19l-7-7 7-7" />
+            </svg>
           </button>
         </div>
       </div>

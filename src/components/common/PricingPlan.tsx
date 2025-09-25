@@ -35,7 +35,11 @@ const PricingPlan = () => {
             </div>
             <button
               className="flex items-center justify-between w-full px-8  py-4 mt-auto text-[#fff] rounded-lg hover:bg-[#ffbd4a] border-t border-[#2F3030] transition-colors"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
             >
               Start My Project Now
               <GoArrowUpRight className="w-5 h-5 ml-2" />

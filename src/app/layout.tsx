@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar"
 import { Montserrat } from "next/font/google"
 import ArrowHandler from "@/components/common/ArrowHandler"
 
-// Import Montserrat
+  
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-sans",

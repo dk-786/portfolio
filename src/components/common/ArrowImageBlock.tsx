@@ -27,7 +27,14 @@ export default function ArrowImageBlock({
   return (
     <div className={className}>
       <div className={arrowWrapperClassName}>
-        <div className="relative w-20 h-20 lg:w-30 lg:h-30 rounded-full group bg-[#171818] border-[#171818] hover:bg-[#ffbd4a] hover:text-black border-12 flex items-center justify-center transition-colors duration-350 cursor-pointer">
+        <div
+          className="relative w-20 h-20 lg:w-30 lg:h-30 rounded-full group bg-[#171818] border-[#171818] hover:bg-[#ffbd4a] hover:text-black border-12 flex items-center justify-center transition-colors duration-350 cursor-pointer"
+          onClick={() => {
+            if (typeof window !== "undefined") {
+              window.scrollTo({ top: 1550, behavior: "smooth" });
+            }
+          }}
+        >
           <BsArrowDown className="text-[#ffbd4a] text-5xl group-hover:text-black transition duration-350" />
         </div>
       </div>
@@ -42,5 +49,3 @@ export default function ArrowImageBlock({
     </div>
   );
 }
-
-

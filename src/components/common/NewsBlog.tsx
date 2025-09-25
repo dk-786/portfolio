@@ -5,8 +5,11 @@ import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import Container from "./Container";
 import { blogPosts } from "@/utils/constant/constant";
+import { useRouter } from "next/navigation";
 
 const NewsBlog = () => {
+  const router = useRouter();
+
   return (
     <Container>
       <section className="text-white w-full px-0 py-8 lg:px-20 lg:py-16">
@@ -22,9 +25,12 @@ const NewsBlog = () => {
                   <span>{post.date}</span>
                 </div>
 
-                <h2 className="text-xl sm:text-2xl lg:text-4xl font-semibold hover:text-[#ffbd4a] cursor-pointer transition-colors">
+                <div
+                  className="text-xl sm:text-2xl lg:text-4xl font-semibold hover:text-[#ffbd4a] cursor-pointer transition-colors"
+                  onClick={() => router.push("/blogdetails")}
+                >
                   {post.title}
-                </h2>
+                </div>
 
                 <Link
                   href={post.link}

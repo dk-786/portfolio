@@ -18,12 +18,16 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = useCallback(() => {
-    setScrolled(window.scrollY > 10);
+    if (typeof window !== "undefined") {
+      setScrolled(window.scrollY > 10);
+    }
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
   }, [handleScroll]);
 
   return (
@@ -54,23 +58,39 @@ const Navbar = () => {
           <NavigationMenuList className="flex gap-5">
             {navItems.map((item) => {
               const isServiceLink = item.href === "/service";
+              const isPortfolioLink = item.href === "/portfolio";
+              const isBlogLink = item.href === "/blog";
               const isServiceActive = isServiceLink && (
                 pathname === "/service" ||
                 pathname === "/service_single" ||
                 pathname.startsWith("/service/")
               );
+              const isPortfolioActive = isPortfolioLink && (
+                pathname === "/portfolio" ||
+                pathname === "/portfolio_single" ||
+                pathname.startsWith("/portfolio/")
+              );
+              const isBlogActive = isBlogLink && (
+                pathname === "/blog" ||
+                pathname === "/blogdetails" ||
+                pathname.startsWith("/blog/")
+              );
               const isActive = isServiceLink
                 ? isServiceActive
-                : pathname === item.href || pathname.startsWith(`${item.href}/`);
+                : isPortfolioLink
+                  ? isPortfolioActive
+                  : isBlogLink
+                    ? isBlogActive
+                  : pathname === item.href || pathname.startsWith(`${item.href}/`);
 
               return (
                 <NavigationMenuItem key={item.href}>
                   <NavigationMenuLink asChild>
-                  <Link
-                    href={item.href}
-                    data-active={isActive}
-                    className="font-medium transition-colors"
-                  >
+                    <Link
+                      href={item.href}
+                      data-active={isActive}
+                      className="font-medium transition-colors"
+                    >
                       {item.label}
                     </Link>
                   </NavigationMenuLink>

@@ -1,7 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { useIsClient } from "@/hooks/useIsClient";
 
 export default function ArrowHandler() {
+  const isClient = useIsClient();
   const [dotPos, setDotPos] = useState({ x: -100, y: -100, visible: false });
   const [circlePos, setCirclePos] = useState({ x: -100, y: -100 });
   const [isPointerTarget, setIsPointerTarget] = useState(false);
@@ -15,8 +17,10 @@ export default function ArrowHandler() {
       }
     };
     checkWidth();
-    window.addEventListener("resize", checkWidth);
-    return () => window.removeEventListener("resize", checkWidth);
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", checkWidth);
+      return () => window.removeEventListener("resize", checkWidth);
+    }
   }, []);
 
   useEffect(() => {
@@ -51,17 +55,19 @@ export default function ArrowHandler() {
       setIsPointerTarget(false);
     };
 
-    window.addEventListener("pointermove", onMove);
-    window.addEventListener("pointerdown", onMove);
-    window.addEventListener("pointerleave", onLeave);
-    window.addEventListener("blur", onLeave);
+    if (typeof window !== "undefined") {
+      window.addEventListener("pointermove", onMove);
+      window.addEventListener("pointerdown", onMove);
+      window.addEventListener("pointerleave", onLeave);
+      window.addEventListener("blur", onLeave);
 
-    return () => {
-      window.removeEventListener("pointermove", onMove);
-      window.removeEventListener("pointerdown", onMove);
-      window.removeEventListener("pointerleave", onLeave);
-      window.removeEventListener("blur", onLeave);
-    };
+      return () => {
+        window.removeEventListener("pointermove", onMove);
+        window.removeEventListener("pointerdown", onMove);
+        window.removeEventListener("pointerleave", onLeave);
+        window.removeEventListener("blur", onLeave);
+      };
+    }
   }, [showCursor]);
 
   useEffect(() => {
@@ -84,7 +90,7 @@ export default function ArrowHandler() {
     }
   }, [dotPos, isPointerTarget, showCursor]);
 
-  if (!showCursor) return null;
+  if (!isClient || !showCursor) return null;
 
   return (
     <div className="fixed inset-0 pointer-events-none z-50">

@@ -45,7 +45,13 @@ export const ProjectGrid: React.FC<ProjectGridProps> = ({
                 </h3>
               </div>
 
-              <button className="hidden lg:flex w-16 h-16 items-center justify-center rounded-md bg-[#111] border border-[#2f3030] text-white hover:bg-[#ffbd4a] hover:text-black transition duration-350">
+              <button className="hidden lg:flex w-16 h-16 items-center justify-center rounded-md bg-[#111] border border-[#2f3030] text-white hover:bg-[#ffbd4a] hover:text-black transition duration-350"
+               onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
+              >
                 <TfiArrowTopRight size={20} />
               </button>
             </div>

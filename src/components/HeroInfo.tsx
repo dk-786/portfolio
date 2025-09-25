@@ -23,13 +23,14 @@ const InfoSection = memo(function InfoSection({
   const alignClass = align === "right" ? "lg:ml-auto ml-0" : "";
 
   return (
-    <div className="flex flex-col gap-3">
-      <div
-        className={`w-10 h-10 border-2 border-[#959595] rounded-full flex items-center justify-center relative ${alignClass}`}
-      >
-        <div className="absolute inset-0 bg-yellow-400 opacity-20 rounded-full blur-sm"></div>
-        <span className="text-yellow-400 text-2xl z-10">✦</span>
-      </div>
+    <div className="flex flex-col gap-4">
+       <Image
+        src="/user/star.jpg"
+        alt="star"
+        width={60}
+        height={60}
+        className={`${alignClass}`}
+      />
       <h2 className="text-2xl font-bold uppercase">{title}</h2>
       {children}
     </div>
@@ -111,17 +112,20 @@ function HeroInfo() {
 
         <div className="overlay_bg absolute inset-0 rounded-[20px] lg:rounded-[40px]" />
 
-        <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 z-10 h-full w-full">
-          <div className="flex flex-col justify-between w-full max-w-full lg:w-60 pr-0 lg:pr-8 gap-8 lg:gap-0">
+        <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-10 z-10 w-full px-0 md:px-0 lg:px-0 min-h-[500px] lg:min-h-[600px]">
+          {/* Left Column */}
+          <div className="flex flex-col justify-between w-full h-full lg:w-60 mb-8 lg:mb-0 gap-8 lg:gap-0">
             <AboutMe />
             <WhatIDo />
           </div>
 
-          <div className="my-6 lg:my-0 flex items-center justify-center">
+          {/* Center Image */}
+          <div className="my-8 lg:my-0 flex items-center justify-center">
             <CenterImage />
           </div>
 
-          <div className="flex flex-col justify-between h-full text-left lg:text-right pl-0 lg:pl-8 gap-8 lg:gap-0">
+          {/* Right Column */}
+          <div className="flex flex-col justify-between w-full h-full text-left lg:text-right mt-8 lg:mt-0 gap-8 lg:gap-0">
             <ContactMe />
             <FindWithMe />
           </div>
