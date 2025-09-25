@@ -4,14 +4,12 @@ import Image from "next/image";
 import { skills } from "@/utils/constant/constant";
 import Container from "@/components/common/Container";
 
-// Define the type for one skill
 interface Skill {
   name: string;
   percentage: number;
   icon: string;
 }
 
-// Props type for SkillCircle
 interface SkillCircleProps {
   skill: Skill;
   index: number;

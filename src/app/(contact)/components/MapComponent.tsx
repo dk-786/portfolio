@@ -5,7 +5,6 @@ import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaf
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-// Fix for default markers in react-leaflet
 delete (L.Icon.Default.prototype as unknown as Record<string, unknown>)._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
@@ -18,9 +17,9 @@ const containerStyle = {
   height: "500px",
 };
 
-const center: [number, number] = [23.0225, 72.5714]; // [lat, lng] for Ahmedabad
+const center: [number, number] = [23.0225, 72.5714]; 
 
-// Component to handle map clicks
+
 function MapClickHandler({ onMapClick }: { onMapClick: (lat: number, lng: number) => void }) {
   useMapEvents({
     click: (e) => {
@@ -31,7 +30,6 @@ function MapClickHandler({ onMapClick }: { onMapClick: (lat: number, lng: number
   return null;
 }
 
-// Component to get map reference
 function MapRef({ onMapReady }: { onMapReady: (map: L.Map) => void }) {
   const map = useMapEvents({});
   
@@ -49,33 +47,27 @@ const MapComponent = () => {
   const [clickedLocation, setClickedLocation] = useState<string>("");
   const [map, setMap] = useState<L.Map | null>(null);
 
-  // Handle scroll events to prevent map zoom from interfering with website scroll
   useEffect(() => {
     const handleWheel = (event: WheelEvent) => {
-      // Check if the scroll is happening over the map
       const mapElement = event.target as Element;
       const isOverMap = mapElement && mapElement.closest('.leaflet-container');
       
       if (isOverMap && map) {
         if (event.ctrlKey) {
-          // Prevent default behavior and handle zoom manually
           event.preventDefault();
           event.stopPropagation();
           
-          // Zoom the map based on scroll direction
           const zoomDelta = event.deltaY > 0 ? -1 : 1;
           const currentZoom = map.getZoom();
           const newZoom = Math.max(1, Math.min(18, currentZoom + zoomDelta));
           
           map.setZoom(newZoom);
         } else {
-          // Prevent map zoom but allow website scroll
           event.stopPropagation();
         }
       }
     };
 
-    // Add event listener with capture phase to catch events early
     document.addEventListener('wheel', handleWheel, { passive: false, capture: true });
 
     return () => {
@@ -86,10 +78,8 @@ const MapComponent = () => {
   const handleMapClick = (lat: number, lng: number) => {
     setClickedPosition([lat, lng]);
     
-    // You can add reverse geocoding here if needed
     setClickedLocation(`Lat: ${lat.toFixed(6)}, Lng: ${lng.toFixed(6)}`);
     
-    // Open in Google Maps
     const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}`;
     window.open(googleMapsUrl, '_blank');
   };
@@ -113,7 +103,6 @@ const MapComponent = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         
-        {/* Original marker */}
         <Marker position={center}>
           <Popup>
             <strong>Ahmedabad, India</strong>
@@ -124,7 +113,6 @@ const MapComponent = () => {
           </Popup>
         </Marker>
 
-        {/* Clicked position marker */}
         {clickedPosition && (
           <Marker position={clickedPosition}>
             <Popup>
@@ -145,7 +133,6 @@ const MapComponent = () => {
         )}
       </MapContainer>
       
-      {/* Display clicked coordinates */}
       {clickedLocation && (
         <div style={{ 
           marginTop: '10px', 

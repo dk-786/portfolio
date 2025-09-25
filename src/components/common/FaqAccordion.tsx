@@ -27,7 +27,7 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
   };
 
   return (
-    <Container>
+    <Container> 
     <div className={`min-h-screen flex items-center justify-center py-4 px-4 lg:px-8 font-sans ${className}`}>
       <div className=" w-full space-y-8">
         {title ? (
@@ -43,7 +43,6 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
               className={`
                  rounded-lg p-4 transition-all duration-300
                 border-1 border-[#2f3030]
-                ${openIndex === index ? 'border-[#ffbd4a]' : ''}
               `}
             >
               <div
